@@ -132,6 +132,129 @@
 
     <form>
       <h2>Checkboxes</h2>
+
+      <h3>Lenguajes de preferencia:</h3>
+
+      <label>
+        <input type="checkbox" value="en" />
+        Inglés
+      </label>
+      <label>
+        <input type="checkbox" value="es" />
+        Español
+      </label>
+      <label>
+        <input type="checkbox" value="do" />
+        Dothraki
+      </label>
+
+      <input type="submit" value="Guardar">
+    </form>
+
+    <form>
+      <h2>Radio buttons</h2>
+
+      <h3>Selecciona el lenguaje de preferencia:</h3>
+
+      <label>
+        <input type="radio" name="language" value="en" />
+        Inglés
+      </label>
+      <label>
+        <input type="radio" name="language" value="es" />
+        Español
+      </label>
+      <label>
+        <input type="radio" name="language" value="do" />
+        Dothraki
+      </label>
+
+      <h3>Seleccione su comida favorita:</h3>
+
+      <label>
+        <input type="radio" name="food" value="en" />
+        Ceviche
+      </label>
+      <label>
+        <input type="radio" name="food" value="es" />
+        Causa
+      </label>
+      <label>
+        <input type="radio" name="food" value="do" />
+        Arroz con pato
+      </label>
+
+      <input type="submit" value="Guardar">
+    </form>
+
+    <form>
+      <h2>Selects</h2>
+
+      <label>
+        Comida favorita
+
+        <select>
+          <option value="">Selecciona tu comida favorita...</option>
+          <option value="fr">Francesa</option>
+          <option value="it">Italiana</option>
+          <option value="jp">Japonesa</option>
+          <option value="pe">Peruana</option>
+          <option value="th">Thailandesa</option>
+        </select>
+      </label>
+
+      <label>
+        Comida favorita (multiple selección) Presiona control + click para seleccionar
+
+        <select multiple>
+          <option value="">Selecciona tu comida favorita...</option>
+          <option value="fr">Francesa</option>
+          <option value="it">Italiana</option>
+          <option value="jp">Japonesa</option>
+          <option value="pe">Peruana</option>
+          <option value="th">Thailandesa</option>
+        </select>
+      </label>
+
+      <input type="submit" value="Guardar">
+    </form>
+
+    <form>
+      <h2>Validaciones</h2>
+
+      <label>
+        Nombre (obligatorio)
+        <input type="text" name="nombre" required minlength="3" maxlength="15" />
+      </label>
+
+      <label>
+        Email  (obligatoria)
+        <input type="email" name="correo" required />
+      </label>
+
+      <label>
+        Edad (obligatoria)
+        <input type="number" name="edad" required min="1" max="99" />
+      </label>
+
+      <label>
+        Teléfono (obligatorio)
+        <input type="tel" name="telefono" placeholder="+51 999 999 999" required pattern="\+[0-9]{2} [0-9]{3} [0-9]{3} [0-9]{3}" />
+      </label>
+
+      <label>
+        Comidas (obligatoria)
+        <select name="comidas" required>
+          <option value="">Selecciona tu comida favorita...</option>
+          <option value="fr">Francesa</option>
+          <option value="it">Italiana</option>
+          <option value="jp">Japonesa</option>
+          <option value="pe">Peruana</option>
+          <option value="th">Thailandesa</option>
+        </select>
+      </label>
+
+      <input type="submit" value="Guardar">
     </form>
   </main>
 </body>
