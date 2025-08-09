@@ -50,6 +50,12 @@ main {
   background-color: hsl(0, 0%, 100%); /* white */
 
   width: 350px;
+
+  padding: 28px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
 .content h2 {
