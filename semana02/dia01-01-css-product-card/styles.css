@@ -27,7 +27,7 @@ main {
   /* border: 1px solid red; */
 
   width: 650px;
-  height: 400px;
+  min-height: 400px;
 
   display: flex;
 
