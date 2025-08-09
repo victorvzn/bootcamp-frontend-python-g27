@@ -19,8 +19,30 @@ body {
 }
 
 main {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   width: 650px;
   height: 400px;
+
+  display: flex;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+}
+
+.photo {
+  background-color: orange;
+
+  width: 300px;
+
+  background-image: url(./images/image-product-desktop.jpg);
+  background-size: cover; /* 100px */
+  background-repeat: no-repeat;
+}
+
+.content {
+  background-color: green;
+
+  width: 350px;
 }
