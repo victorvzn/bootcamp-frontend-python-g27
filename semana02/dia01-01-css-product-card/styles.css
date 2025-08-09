@@ -61,5 +61,14 @@ main {
 }
 
 .content h1 {
-  color: red;
+  font-family: "Fraunces", serif;
+  font-size: 42px; /* 14px x 3 */
+  line-height: 1;
+  color: hsl(158, 42%, 18%);
+}
+
+.content p {
+  font-weight: 500;
+  line-height: 1.5;
+  color: hsl(228, 12%, 48%);
 }
