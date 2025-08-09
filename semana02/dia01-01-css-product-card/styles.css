@@ -18,6 +18,11 @@ body {
   height: 100dvh;
 }
 
+/* RESET: Estos son estilos que resetean las propiedades en todos los navegadores para evitar conflictos con sus valores por defecto*/
+h1, h2, p {
+  margin: 0;
+}
+
 main {
   /* border: 1px solid red; */
 
@@ -42,7 +47,19 @@ main {
 }
 
 .content {
-  background-color: green;
+  background-color: hsl(0, 0%, 100%); /* white */
 
   width: 350px;
+}
+
+.content h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500; /* Peso de la letra o ancho de la letra */
+  color: hsl(228, 12%, 48%);
+  letter-spacing: 7px;
+}
+
+.content h1 {
+  color: red;
 }
