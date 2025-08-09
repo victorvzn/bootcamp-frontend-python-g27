@@ -8,4 +8,19 @@ body {
   font-size: 14px;
 
   background-color: hsl(30, 38%, 92%);
+
+  display: flex;
+  /* alinea el contenido horizontalmente */
+  justify-content: center;
+  /* alinea el contenido vericalmente */
+  align-items: center;
+
+  height: 100dvh;
+}
+
+main {
+  border: 1px solid red;
+
+  width: 650px;
+  height: 400px;
 }
