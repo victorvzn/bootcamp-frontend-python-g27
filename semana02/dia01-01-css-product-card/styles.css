@@ -78,3 +78,26 @@ main {
   line-height: 1.5;
   color: hsl(228, 12%, 48%);
 }
+
+.content div {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.content span {
+  font-family: "Fraunces", serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+}
+
+.content s {
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+}
+
+.content button {
+  
+}
