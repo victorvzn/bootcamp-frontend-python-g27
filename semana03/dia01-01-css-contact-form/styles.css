@@ -19,7 +19,7 @@ body {
 .contact-form {
   background-color: hsl(0, 0%, 100%);
 
-  width: 400px;
+  width: 500px;
 
   padding: 32px; /* 16px x 2 */
 
@@ -61,4 +61,43 @@ label textarea {
   gap: 16px;
 }
 
+input[type=submit] {
+  width: 100%;
+  padding: 16px;
 
+  border: none;
+  border-radius: 8px;
+
+  background-color: hsl(169, 82%, 27%); /* Green 600 */
+  color: hsl(0, 0%, 100%);
+
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.required {
+  color: hsl(169, 82%, 27%);
+  font-weight: 700;
+}
+
+.query-type {
+  border: 1px solid hsl(186, 15%, 59%); /* Grey 500 */;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.query-type label {
+  margin-bottom: 0;
+}
+
+.flex {
+  display: flex;
+  gap: 8px;
+}
