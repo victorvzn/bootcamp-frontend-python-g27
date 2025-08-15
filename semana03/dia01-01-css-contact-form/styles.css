@@ -1,9 +1,18 @@
-/*
-  font-family: "Karla", sans-serif;
-*/
-
 body {
-  /* background-color: red; */
+   /* hsl(color, saturación y brillo) */
+  background-color: hsl(148, 38%, 91%); 
 
   font-family: "Karla", sans-serif;
+
+  display: flex;
+  justify-content: center; /* Alieanmiento horizontal */
+  align-items: center; /* Alieanmiento vertical */
+
+  height: 100dvh;
+}
+
+.contact-form {
+  background-color: hsl(0, 0%, 100%);
+
+  width: 400px;
 }
