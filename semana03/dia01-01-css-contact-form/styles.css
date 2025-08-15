@@ -22,4 +22,43 @@ body {
   width: 400px;
 
   padding: 32px; /* 16px x 2 */
+
+  border-radius: 16px;
 }
+
+.contact-form h1 {
+  color: hsl(187, 24%, 22%); /* Grey 900 */
+  margin-bottom: 32px;
+}
+
+label {
+  /* border: 1px solid red; */
+
+  display: block;
+  margin-bottom: 16px;
+}
+
+label input[type=text],
+label input[type=email],
+label textarea {
+  display: flex;
+  margin-bottom: 16px;
+  margin-top: 8px;
+
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid hsl(186, 15%, 59%); /* Grey 500 */
+  padding: 16px;
+
+  box-sizing: border-box;
+}
+
+.row {
+  /* border: 1px solid blue; */
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+
