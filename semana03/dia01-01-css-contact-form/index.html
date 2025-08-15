@@ -6,31 +6,53 @@
   <title>Document</title>
 </head>
 <body>
-  <main>
+  <main class="contact-form">
     <h1>Contact Us</h1>
 
     <form>
+      <div class="row">
+        <label>
+          First Name <span class="required">*</span>
+          <input type="text" name="first_name" />
+        </label>
+        
+        <label>
+          Last Name <span class="required">*</span>
+          <input type="text" name="last_name" />
+        </label>
+      </div>
+
       <label>
-        First Name <span class="required">*</span>
-        <input type="text" name="first_name" />
+        Email Address <span class="required">*</span>
+        <input type="text" name="email_address" />
+      </label>
+
+      <div>
+        Query Type <span class="required">*</span>
+
+        <div class="row">
+          <label>
+            General Enquiry <span class="required">*</span>
+            <input type="radio" name="query_type" />
+          </label>
+          <label>
+            Support Request <span class="required">*</span>
+            <input type="radio" name="query_type" />
+          </label>
+        </div>
+      </div>
+
+      <label>
+        Message <span class="required">*</span>
+        <textarea type="text" name="message"></textarea>
       </label>
 
       <label>
-        Last Name <span class="required">*</span>
-        <input type="text" name="first_name" />
+        <input type="checkbox" />
+        I consent to being contacted by the team
       </label>
 
-      Email Address
-
-      Query Type
-      General Enquiry
-      Support Request
-
-      Message
-
-      I consent to being contacted by the team
-
-      Submit
+      <input type="submit" value="Submit" />
     </form>
   </main>
 </body>
