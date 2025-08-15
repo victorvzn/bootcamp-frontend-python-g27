@@ -19,7 +19,7 @@ body {
 .contact-form {
   background-color: hsl(0, 0%, 100%);
 
-  width: 500px;
+  width: 400px;
 
   padding: 32px; /* 16px x 2 */
 
@@ -81,7 +81,7 @@ input[type=submit] {
   font-weight: 700;
 }
 
-.query-type {
+.query-type label {
   border: 1px solid hsl(186, 15%, 59%); /* Grey 500 */;
   display: flex;
   justify-content: flex-start;
@@ -93,7 +93,7 @@ input[type=submit] {
   margin-bottom: 16px;
 }
 
-.query-type label {
+.query-type {
   margin-bottom: 0;
 }
 
