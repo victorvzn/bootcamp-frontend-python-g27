@@ -114,3 +114,17 @@ img {
   /* https://cssgradient.io/ */
   background: linear-gradient(90deg,hsl(176, 68%, 64%) 0%, hsl(198, 60%, 50%) 100%);
 }
+
+.features {
+  border: 1px solid red;
+
+  display: grid;
+  grid-template-columns: 340px 340px;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.feature {
+  
+}
