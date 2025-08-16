@@ -13,6 +13,7 @@ font-family: "Open Sans", sans-serif;
 
 html {
   /* TODO: Usar el tamaño de fuente con tamaños relativos usando REMs */
+  font-size: 14px;
 }
 
 body {
@@ -20,7 +21,6 @@ body {
   color: hsl(0, 0%, 100%);
 
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
 }
 
 a {
@@ -30,13 +30,15 @@ a {
 
 img {
   /* TODO: RWD (Responsive Web Design) para imágenes*/
+  max-width: 100%;
+  height: auto;
 }
 
 /* UTILS */
 
 .wrapper {
   /* Adaptando el ancho de la página a dispositivos móviles y desktops */
-  width: min(100% - 42px, 1440px);
+  width: min(100% - 3rem, 1440px); /* 42px = 14px * 3 = 3rem */
 }
 
 /* HEADER SECTION */
@@ -52,10 +54,12 @@ img {
 
    /* Centra el elemento con margenes automáticos */
   margin: 0 auto; /* 0: TOP, BOTTOM / auto: LEFT, RIGHT */
-  margin-top: 42px; /* 14px * 3 = 42px */ 
+  margin-top: 3rem; /* 14px * 3 = 42px = 3rem */ 
 }
 
 .header__nav {
   display: flex;
-  gap: 42px;
+  gap: 3rem;
 }
+
+/* HERO SECTION */
