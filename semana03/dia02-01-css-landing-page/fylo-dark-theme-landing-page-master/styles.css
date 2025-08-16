@@ -78,6 +78,10 @@ img {
   /* TODO: Agregar el fondo */
 }
 
+.hero__image {
+  width: min(100% - 3rem, 720px);
+}
+
 .hero__title {
   /* border: 1px solid red; */
 
