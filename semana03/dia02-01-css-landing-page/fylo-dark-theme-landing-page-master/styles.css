@@ -106,5 +106,5 @@ img {
   padding: 1rem 1.5rem;
   min-width: 220px;
   color: hsl(0, 0%, 100%);
-  background-color: red;
+  background: linear-gradient(90deg,hsl(176, 68%, 64%) 0%, hsl(198, 60%, 50%) 100%);
 }
