@@ -50,6 +50,7 @@ img {
 
   /* width: 1000px; */
 
-  margin: 0 auto; /* Centra el elemento con margenes automáticos */
-  margin-top: 50px;
+   /* Centra el elemento con margenes automáticos */
+  margin: 0 auto; /* 0: TOP, BOTTOM / auto: LEFT, RIGHT */
+  margin-top: 42px; /* 14px * 3 = 42px */ 
 }
