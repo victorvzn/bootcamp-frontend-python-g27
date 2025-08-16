@@ -1,3 +1,10 @@
+/* 
+font-family: "Raleway", sans-serif;
+font-family: "Open Sans", sans-serif;
+*/
+
 body {
   background-color: bisque;
+
+  font-family: "Open Sans", sans-serif;
 }
