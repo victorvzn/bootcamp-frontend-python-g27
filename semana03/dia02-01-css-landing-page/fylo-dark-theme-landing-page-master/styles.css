@@ -115,8 +115,10 @@ img {
   background: linear-gradient(90deg,hsl(176, 68%, 64%) 0%, hsl(198, 60%, 50%) 100%);
 }
 
+/* FEATURE SECTION */
+
 .features {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   display: grid;
   grid-template-columns: 340px 340px;
@@ -126,5 +128,18 @@ img {
 }
 
 .feature {
-  
+  /* border: 1px solid red; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.feature__title {
+  font-family: "Raleway", sans-serif;
+}
+
+.feature__text {
+  text-align: center;
 }
