@@ -91,9 +91,20 @@ img {
 }
 
 .hero__text {
+  width: min(100% - 3rem, 720px);
 
+  font-weight: 400;
+  font-size: 1.2rem; /* 14px * 1.2 = 16.8px = 1.2rem */
+  text-align: center;
 }
 
 .hero__button {
+  font-weight: 700;
 
+  border: 0;
+  border-radius: 7rem;
+  padding: 1rem 1.5rem;
+  min-width: 220px;
+  color: hsl(0, 0%, 100%);
+  background-color: red;
 }
