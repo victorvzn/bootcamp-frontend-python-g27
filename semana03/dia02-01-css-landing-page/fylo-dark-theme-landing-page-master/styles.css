@@ -32,5 +32,23 @@ img {
   /* TODO: RWD (Responsive Web Design) para imágenes*/
 }
 
+/* UTILS */
+
+.wrapper {
+  width: min(100% - 42px, 1440px);
+}
+
 /* HEADER SECTION */
 
+.header {
+  border: 1px solid red;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* width: 1000px; */
+
+  margin: 0 auto; /* Centra el elemento con margenes automáticos */
+  margin-top: 50px;
+}
