@@ -16,10 +16,10 @@ html {
 }
 
 body {
-  background-color: bisque;
+  background-color: hsl(217, 28%, 15%);
+  color: hsl(0, 0%, 100%);
 
   font-family: "Open Sans", sans-serif;
-
   font-size: 14px;
 }
 
@@ -42,7 +42,7 @@ img {
 /* HEADER SECTION */
 
 .header {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   display: flex;
   justify-content: space-between;
@@ -53,4 +53,9 @@ img {
    /* Centra el elemento con margenes automáticos */
   margin: 0 auto; /* 0: TOP, BOTTOM / auto: LEFT, RIGHT */
   margin-top: 42px; /* 14px * 3 = 42px */ 
+}
+
+.header__nav {
+  display: flex;
+  gap: 42px;
 }
