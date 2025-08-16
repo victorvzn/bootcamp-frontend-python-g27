@@ -35,6 +35,7 @@ img {
 /* UTILS */
 
 .wrapper {
+  /* Adaptando el ancho de la página a dispositivos móviles y desktops */
   width: min(100% - 42px, 1440px);
 }
 
