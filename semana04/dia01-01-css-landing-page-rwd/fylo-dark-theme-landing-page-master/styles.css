@@ -159,3 +159,18 @@ img {
 }
 
 /* TODO: FONDO DE HERO, RESPONSIVE DE FEATURES EN UNA COLUMNA */
+
+/* COLLABORATION SECTION */
+
+.collaboration {
+  border: 1px solid red;
+
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+
+  /* TODO: Terminar los estilos para esta sección de colaboración */
+}
+
+.how_works {
+  border: 1px solid blue;
+}
