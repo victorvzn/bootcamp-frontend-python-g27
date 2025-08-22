@@ -163,14 +163,59 @@ img {
 /* COLLABORATION SECTION */
 
 .collaboration {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   padding-top: 8rem;
   padding-bottom: 8rem;
 
   /* TODO: Terminar los estilos para esta sección de colaboración */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+@media(min-width: 1200px) {
+  .collaboration {
+    flex-direction: row;
+  }
 }
 
 .how_works {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  width: min(100% - 3rem, 480px);
+}
+
+.how_works__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 1200px) {
+  .how_works__title {
+    font-size: 2.8rem;
+  }
+}
+
+.how_works__text {
+  /* font-family: "Open Sans", sans-serif; */
+}
+
+.how_works__button {
+  color: hsl(176, 68%, 64%);
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  
+  width: 10.8rem;
+  border-bottom: 1px solid hsl(176, 68%, 64%);
+  padding-bottom: 0.5rem;
 }
