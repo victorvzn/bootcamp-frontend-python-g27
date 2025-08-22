@@ -251,6 +251,11 @@ img {
   position: relative;
 }
 
+/* 
+  pseudo-elemento ::after, ::before
+  selectores: :fitst-child, :nth-child(2)
+*/
+
 /* .testimonial:nth-child(2):before {} */
 /* .testimonial:first-child:before {} */
 /* .testimonial:last-child:after {} */
