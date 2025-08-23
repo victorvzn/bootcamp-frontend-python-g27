@@ -160,5 +160,31 @@ a {
 /* TODO: Terminar el slider de galería */
 
 .gallery__slider {
-  display: flex;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .gallery__slider {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.gallery__slider div {
+  width: 90px;
+  height: 90px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.gallery__photo--active {
+  border: 3px solid var(--primary-orange);
+}
+
+.gallery__photo--active img {
+  opacity: .5;
+}
+
+.gallery__slider div:hover {
+  border: 3px solid var(--primary-orange);
 }
