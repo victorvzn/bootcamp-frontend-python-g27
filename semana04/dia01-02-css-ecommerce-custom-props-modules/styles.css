@@ -56,3 +56,33 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* UTILS */
+
+.hidden {
+  display: none;
+}
+
+.wrapper {
+  /* width: 1200px; */
+  /* border: 1px solid red; */
+
+  width: min(100%, 1200px);
+
+  margin: 0 auto; /* TOP BOTTOM / LEFT RIGHT */
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid var(--neutral-grayish-blue);
+}
+
+.header__wrapper {
+  border: 1px solid red;
+}
