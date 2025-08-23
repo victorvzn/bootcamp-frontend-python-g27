@@ -1,5 +1,12 @@
 /* font-family: "Kumbh Sans", sans-serif; */
 
+/*
+576px  -> pantallas pequeñas (celulares)
+768px  -> pantallas pequeñas (tablets y celulares)
+992px  -> pantallas medianas (Desktop)
+1200px -> pantallas grandes (Desktops, TVs)
+*/
+
 /* CUSTOM PROPERTIES <> VARIABLES */
 
 :root {
@@ -84,5 +91,27 @@ a {
 }
 
 .header__wrapper {
-  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.header__links {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .header__links {
+    display: flex;
+    font-size: .9rem;
+    font-weight: var(--font-weight-regular); /* Por defecto */
+    gap: 1.5rem;
+    color: var(--neutral-dark-grayish-blue)
+  }
+}
+
+.header__icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
