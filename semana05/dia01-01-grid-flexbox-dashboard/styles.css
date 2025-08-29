@@ -4,6 +4,8 @@
   --bg-3: #8bd3dd;
   --bg-4: #f582ae;
   --bg-5: #b082f5;
+
+  /* --sidebarWidth: 300px; */
 }
 
 /* RESET */
@@ -18,7 +20,7 @@
 body {
   display: grid;
 
-  grid-template-columns: 100px 1fr 0;
+  grid-template-columns: var(--sidebarWidth, 100px) 1fr 0;
   grid-template-rows: 60px 1fr;
 
   height: 100dvh;
@@ -49,6 +51,10 @@ body {
   padding: 1rem;
 
   grid-area: sidebar;
+}
+
+body:has(.sidebar--open) {
+  --sidebarWidth: 300px;
 }
 
 .settings {
