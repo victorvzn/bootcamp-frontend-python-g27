@@ -1,0 +1,45 @@
+:root {
+  --bg-1: #fef6e4;
+  --bg-2: #f3d2c1;
+  --bg-3: #8bd3dd;
+  --bg-4: #f582ae;
+  --bg-5: #b082f5;
+}
+
+/* RESET */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* GENERAL */
+
+body {
+}
+
+.header {
+  background-color: var(--bg-1);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 1.5rem;
+}
+
+.sidebar {
+  background-color: var(--bg-2);
+}
+
+.settings {
+  background-color: var(--bg-3);
+}
+
+.main {
+  background-color: var(--bg-4);
+}
+
+.card {
+  background-color: var(--bg-5);
+}
