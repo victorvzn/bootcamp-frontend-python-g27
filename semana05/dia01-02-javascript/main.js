@@ -172,6 +172,8 @@ console.log(cadena2.length) // 6
 
 console.log(cadena1.length === cadena2.length) // true
 
+// TODO: Resolver para mañana
+
 // 2. Retornar true si un numero es menor que 40 sino devolver false
 // 3. Retornar True si un numero es menor que 60 sino devolver False
 // 4. Retornar True si un numero es par sino devolver False
