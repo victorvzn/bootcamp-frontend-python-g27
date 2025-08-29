@@ -258,3 +258,7 @@ a {
   color: var(--neutral-dark-grayish-blue);
   text-decoration: line-through;
 }
+
+.cart__button svg {
+  fill: #00ff00;
+}
