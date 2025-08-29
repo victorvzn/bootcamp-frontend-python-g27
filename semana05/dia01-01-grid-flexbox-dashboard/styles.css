@@ -22,6 +22,13 @@ body {
   grid-template-rows: 60px 1fr;
 
   height: 100dvh;
+
+  /* Grid Template Areas */
+
+  grid-template-areas:
+    "sidebar header header"
+    "sidebar main settings"
+  ;
 }
 
 .header {
@@ -32,24 +39,32 @@ body {
   align-items: center;
 
   padding: 0 1.5rem;
+
+  grid-area: header;
 }
 
 .sidebar {
   background-color: var(--bg-2);
 
   padding: 1rem;
+
+  grid-area: sidebar;
 }
 
 .settings {
   background-color: var(--bg-3);
 
   padding: 1rem;
+
+  grid-area: settings;
 }
 
 .main {
   background-color: var(--bg-4);
 
   padding: 1rem;
+
+  grid-area: main;
 }
 
 .card {
