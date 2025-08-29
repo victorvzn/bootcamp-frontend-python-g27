@@ -18,7 +18,7 @@
 body {
   display: grid;
 
-  grid-template-columns: 100px 1fr 100px;
+  grid-template-columns: 100px 1fr 0;
   grid-template-rows: 60px 1fr;
 
   height: 100dvh;
@@ -57,6 +57,8 @@ body {
   padding: 1rem;
 
   grid-area: settings;
+
+  display: none;
 }
 
 .main {
@@ -65,10 +67,57 @@ body {
   padding: 1rem;
 
   grid-area: main;
+
+  /* TODO: aplicar grid areas para esta sección */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 2rem;
+}
+
+@media(min-width: 768px) {
+  .main {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    grid-template-areas: 
+      "card1 card2 card3"
+      "card4 card4 card5"
+      "card4 card4 card6"
+    ;
+  }
+
+  .card:nth-child(1) {
+    grid-area: card1;
+  }
+
+  .card:nth-child(2) {
+    grid-area: card2;
+  }
+
+  .card:nth-child(3) {
+    grid-area: card3;
+  }
+
+  .card:nth-child(4) {
+    grid-area: card4;
+  }
+
+  .card:nth-child(5) {
+    grid-area: card5;
+  }
+
+  .card:nth-child(6) {
+    grid-area: card6;
+  }
 }
 
 .card {
   background-color: var(--bg-5);
 
   border-radius: .5rem;
+
+  font-size: 2rem;
+  display: grid;
+  place-content: center;
 }
