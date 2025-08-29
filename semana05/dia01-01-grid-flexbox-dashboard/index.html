@@ -30,5 +30,15 @@
     <div class="card">CARD 5</div>
     <div class="card">CARD 6</div>
   </main>
+
+  <script>
+    /* Al hacer click en el icon buttonMenu debe abrirse el menu a 300px */
+    const buttonMenu = document.querySelector('.header__menu')
+    const sidebarMenu = document.querySelector('.sidebar')
+
+    buttonMenu.addEventListener('click', () => {
+      sidebarMenu.classList.toggle('sidebar--open')
+    })
+  </script>
 </body>
 </html>
