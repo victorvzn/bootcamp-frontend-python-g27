@@ -39,6 +39,13 @@
     buttonMenu.addEventListener('click', () => {
       sidebarMenu.classList.toggle('sidebar--open')
     })
+
+    const buttonSettings = document.querySelector('.header__settings')
+    const settingsMenu = document.querySelector('.settings')
+
+    buttonSettings.addEventListener('click', () => {
+      settingsMenu.classList.toggle('settings--open')
+    })
   </script>
 </body>
 </html>

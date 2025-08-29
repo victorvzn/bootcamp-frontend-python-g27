@@ -20,7 +20,7 @@
 body {
   display: grid;
 
-  grid-template-columns: var(--sidebarWidth, 100px) 1fr 0;
+  grid-template-columns: var(--sidebarWidth, 100px) 1fr var(--settingsWidth, 0);
   grid-template-rows: 60px 1fr;
 
   height: 100dvh;
@@ -31,6 +31,8 @@ body {
     "sidebar header header"
     "sidebar main settings"
   ;
+
+  transition: 300ms;
 }
 
 .header {
@@ -53,6 +55,10 @@ body {
   grid-area: sidebar;
 }
 
+.header__menu {
+  cursor: pointer;
+}
+
 body:has(.sidebar--open) {
   --sidebarWidth: 300px;
 }
@@ -65,6 +71,14 @@ body:has(.sidebar--open) {
   grid-area: settings;
 
   display: none;
+}
+
+.settings--open {
+  display: block;
+}
+
+body:has(.settings--open) {
+  --settingsWidth: 300px;
 }
 
 .main {
