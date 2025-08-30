@@ -269,3 +269,146 @@ switch (hero) {
 
 // ESTRUCTURAS REPETITIVAS
 
+// FOR (Sirve para repetir una o varias instrucciones)
+
+// for(INICIALIZADOR, CONDICIÓN, CONTADOR)
+for(let i = 0; i < 10; i = i + 1) {
+  console.log('FOR', i)
+}
+
+// i = i + 1 ES EQUIVALENTE A i++
+
+for(let i = 0; i < 10; i++) {
+  console.log('FOR', i)
+}
+
+// WHILE
+
+let j = 0 // CONTADOR
+
+while (j < 10) {
+  console.log('WHILE', j)
+
+  j++ // ⚠ Cuidado con crear un bucle infinito
+}
+
+// DO WHILE
+
+let k = 0
+
+do {
+  console.log('DO-WHILE', k)
+
+  k++
+} while(k < 10)
+
+// EJERCICIOS
+
+// 1. Determinar si la edad de una persona es mayor de edad o menor de edad mostrando 'Mayor de edad' o 'Menor de edad'
+
+const edadPersona = 39
+
+if (edadPersona >= 18) {
+  console.log('EJERCICIO 1', 'Mayor de edad')
+} else {
+  console.log('EJERCICIO 1', 'Menor de edad')
+}
+
+// 2. Retornar un saludo en tres diferentes lenguajes:
+//    - si es español mostrará 'Hola'
+//    - si es inglés mostrará 'Hello'
+//    - si es aimara mostrará 'kamisaraki'
+// 3. Si un numero es divisible entre 3 y 5 devolver 'fizzbuzz'
+//    Si un numero es divisible entre 3 devolver 'fizz'
+//    Si un numero es divisible entre 5 devolver 'buzz'
+//    De lo contrario devolver el mismo número
+// 4. Retornar true si un numero es primo sino devolver false
+//    Pista: un numero primo es divisible por sí mismo y por 1
+// 5. Devolver un valor que se incremente de dos en dos y devuelva los menores a 10
+
+// FUNCIONES (Son bloques de código que podemos reutilizar)
+
+// Declaración
+function nombreDeLaFuncion() {
+  // Cuerpo de la función y aquí va la lógica a ejecutar y la que vamos a reutilizar
+}
+
+// Ejecutar, aquitar estamos llamando a la función
+nombreDeLaFuncion()
+nombreDeLaFuncion()
+
+// Funciones sin parámetros
+
+function imprimirMiNombre() {
+  console.log('Hola soy Victor')
+  console.log('Y soy fullstack')
+}
+
+imprimirMiNombre()
+imprimirMiNombre()
+
+// Funciones con parámetros y valores por defecto
+
+function imprimirUnNombre(nombre="Anónimo", apellido='') {
+  // if (nombre === undefined) {
+  //   nombre = 'Anónimo'
+  // }
+
+  console.log('Hola soy', nombre, apellido)
+}
+
+imprimirUnNombre() // Hola soy undefined
+imprimirUnNombre("Oscar", 'Carhuachin') // Hola soy Oscar Carhuachin
+
+// EJERCICIOS
+
+// 1. Usando funciones determinar si la edad de una persona es mayor de edad o menor de edad mostrando 'Mayor de edad' o 'Menor de edad.
+
+function esMayorOMenorDeEdad(edad) {
+  if (edad >= 18) {
+    console.log('Mayor de edad')
+  } else {
+    console.log('Menor de edad')
+  }
+}
+
+esMayorOMenorDeEdad(39)
+esMayorOMenorDeEdad(8)
+esMayorOMenorDeEdad(17)
+
+// 2. Retornar true si un numero es primo sino devolver false
+// Pista: un numero primo es divisible por sí mismo y por 1
+
+
+// FUNCIONES SIN RETORNO
+
+function esMayorOMenorDeEdad(edad) {
+  if (edad >= 18) {
+    console.log('Mayor de edad')
+  } else {
+    console.log('Menor de edad')
+  }
+
+  // FUNCION QUE NO RETORNO NADA === undefined
+}
+
+console.log(esMayorOMenorDeEdad(39)) // undefined
+
+// FUNCIONES CON RETORNO
+
+function esMayorOMenorDeEdadConRetorno(edad) {
+  if (edad >= 18) {
+    return 'Mayor de edad'
+  } else {
+    return 'Menor de edad'
+  }
+
+  // FUNCION QUE NO RETORNO NADA === undefined
+}
+
+const resultado = esMayorOMenorDeEdadConRetorno(15)
+
+console.log(resultado)
+
+console.log(esMayorOMenorDeEdadConRetorno(25)) // Mayor de edad
+console.log(esMayorOMenorDeEdadConRetorno(12)) // Menor de edad
