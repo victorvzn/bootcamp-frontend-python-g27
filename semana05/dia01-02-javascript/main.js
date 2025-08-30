@@ -251,7 +251,7 @@ if (hero === 'Batman') {
 
 // CONDICIONALES (SWITCH)
 
-hero = 'Ironman'
+hero = 'Batman'
 
 switch (hero) {
   case 'Batman':
