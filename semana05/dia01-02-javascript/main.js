@@ -412,3 +412,38 @@ console.log(resultado)
 
 console.log(esMayorOMenorDeEdadConRetorno(25)) // Mayor de edad
 console.log(esMayorOMenorDeEdadConRetorno(12)) // Menor de edad
+
+// MÉTODOS DE CADENAS
+
+const welcome = ' Hola Javascript '
+
+console.log(welcome.length)
+console.log(welcome.toUpperCase())
+console.log(welcome.toLowerCase())
+console.log(welcome.trim()) // Remueve los espacios en blanco al inicio y al final de la cadena
+
+const avatar = 'Hola @me'
+
+console.log(avatar.concat('victorvzn')) // Hola @mevictorvzn
+console.log(avatar.replace('me', 'victorvzn')) // Hola @victorvzn
+console.log(avatar.slice(0, 5)) // Retorna una parte de la cadena tomando la posición/índice de inicio y final en los parámetros
+console.log(welcome.indexOf('script')) // 10
+
+
+// TIPOS DE DATOS NO PRIMITIVOS (ARRAYS, OBJECTS)
+
+// ARRAYS
+
+// Un arreglo tien elementos de cualquier tipo de dato: cadena, números, booleans, null, undefined, funciones, arrays, objetos, etc.
+
+const arregloVacio = []
+const arregloConNombres = ['Victor', 'Liliana', 'Marcial', 'Mariana']
+const listaConValores = [1, 2, 3, 'Victor', 'Villazón', true, null, undefined, [6, 7, 8]]
+const listaConFunciones = [() => (console.log('Hola fn()'))]
+
+console.log(arregloVacio)
+console.log(arregloConNombres)
+console.log(listaConValores)
+console.log(listaConFunciones)
+
+
