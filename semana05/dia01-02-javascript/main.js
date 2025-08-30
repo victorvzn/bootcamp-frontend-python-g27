@@ -439,11 +439,71 @@ console.log(welcome.indexOf('script')) // 10
 const arregloVacio = []
 const arregloConNombres = ['Victor', 'Liliana', 'Marcial', 'Mariana']
 const listaConValores = [1, 2, 3, 'Victor', 'Villazón', true, null, undefined, [6, 7, 8]]
-const listaConFunciones = [() => (console.log('Hola fn()'))]
+
+const listaConFunciones = [() => (console.log('Hola fn()')), '123', 999]
 
 console.log(arregloVacio)
 console.log(arregloConNombres)
 console.log(listaConValores)
 console.log(listaConFunciones)
 
+// Lectura de los elementos de un arreglo
 
+console.log(listaConValores[0]) // 1
+console.log(listaConValores[4]) // Villazón
+console.log(listaConValores[5]) // true
+console.log(listaConValores[100]) // undefined
+console.log(listaConValores[8][1]) // 7
+
+listaConFunciones[0]() // Estamos ejecutando la función que está en el índice 0 del arreglo
+
+// ¿Cómo sabemos la longitud de un arreglo?
+
+console.log(arregloConNombres.length) // 4 elementos
+console.log(listaConValores.length) // 9 elementos
+
+//Escritura en arreglos
+
+listaConValores[0] = 'Fiorella'
+listaConValores[4] = 'Jimenez'
+
+console.log(listaConValores)
+
+// OPERACIONES SOBRE LOS ARREGLOS
+
+// Insertar nuevos elementos al final del arreglo
+
+arregloConNombres.push('Javascript')
+arregloConNombres.push('CSS')
+
+console.log(arregloConNombres)
+
+// Remover elementos del final del arreglo
+
+arregloConNombres.pop()
+
+console.log(arregloConNombres)
+
+// Insertar un elemento en una posición determinada
+
+const arr = [...arregloConNombres] // Copia o Clone del arregloConNombres
+
+console.log(arr)
+arr.splice(1, 0, 'HTML')
+console.log(arr)
+console.log(arregloConNombres) // Queda intacto
+
+// Eliminar un elemento
+
+console.log(arregloConNombres) // ['Victor', 'HTML', 'Liliana', 'Marcial', 'Mariana', 'Javascript']
+arregloConNombres.splice(2, 1)
+console.log(arregloConNombres) // ['Victor', 'Liliana', 'Mariana', 'Javascript']
+
+// Otras funciones: slice (Investiguen)
+
+// https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+
+// Split y join para cadenas
+
+console.log('frutas'.split(''))
+console.log('frutas'.split('').join(','))
