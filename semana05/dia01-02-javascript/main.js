@@ -571,3 +571,11 @@ let invitados = ["Ana", "Luis", "María", "Pedro", "Carla"];
 
 // MÉTODOS DE ARREGLOS (includes, map, filter, reduce, every, some, flat, flatMap, etc.)
 
+const languages = ['javascript', 'php', 'python', 'C', 'c++', 'java', 'python']
+
+// Método INCLUDES, verifica si existe cierto valor(tipo de dato) en un arreglo y devuelve un resultado booleano(true o false)
+
+console.log('INCLUDES', languages.includes('java')) // true
+console.log('INCLUDES', languages.includes('cobol')) // false
+console.log('INCLUDES', languages.includes('PYTHON')) // false
+
