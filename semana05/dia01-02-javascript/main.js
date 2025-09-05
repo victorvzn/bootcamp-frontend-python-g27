@@ -605,3 +605,26 @@ const filteredLanguages = languages.filter(
 console.log(filteredLanguages)
 console.log(languages)
 
+// EJERCICIO: Análisis de compras
+// Tienes un arreglo con los nombres de productos que un cliente compró en una tienda:
+
+const compras = [
+  "manzana",
+  "pan",
+  "leche",
+  "manzana",
+  "queso",
+  "huevo",
+  "pan",
+  "jugo",
+  "manzana"
+];
+
+// Resuelve lo siguiente:
+
+// includes: Verifica si el cliente compró "queso".
+console.log()
+// filter: Crea un nuevo arreglo que contenga solo las manzanas que se compraron.
+console.log()
+// reduce: Cuenta cuántos productos en total compró el cliente.
+console.log()
