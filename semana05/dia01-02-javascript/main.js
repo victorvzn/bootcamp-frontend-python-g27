@@ -628,3 +628,71 @@ console.log()
 console.log()
 // reduce: Cuenta cuántos productos en total compró el cliente.
 console.log()
+
+// Método REDUCE, nos ayuda a tomar los valores de un arreglo y sumarlos
+
+const numeros = [3, 40, 100, 7, 50]
+
+let acumulador = 0
+
+for (let i=0; i < numeros.length; i++) {
+  acumulador = acumulador + numeros[i]
+}
+
+console.log(acumulador)
+
+// Vamos a usar reduce
+
+const sumatoria = numeros.reduce(
+  function(acumulador, valorActual) {
+    return acumulador + valorActual
+  },
+  0
+)
+
+console.log(sumatoria)
+
+// Método SORT y TOSORTED, nos ayuda a ordenar un arreglo de elementos.
+// ⚠ Muta el arreglo original. Ordena cadenas de texto.
+
+// [...languages]: esta sintaxis copia el arreglo original en un nuevo arreglo
+
+const copiaDeLanguages = [...languages]
+const ordenandoLanguages = copiaDeLanguages.sort()
+
+const ordenandoLanguagesMejorado = languages.toSorted()
+
+console.log(ordenandoLanguages)
+console.log(ordenandoLanguagesMejorado)
+console.log(languages)
+
+const edades = [25, 12, 10, 89, 32, 81, 3]
+
+const ordenandoEdadesAsc = [...edades].sort(function(a, b) {
+  // Si el resultado es negativo -> a va antes que b
+  // Si el resultado es positivo -> b va antes que a
+  // Si es 0 -> son iguales
+  return a - b
+})
+
+const ordenandoEdadesDesc = [...edades].sort(function(a, b) {
+  return b - a
+})
+
+console.log(ordenandoEdadesAsc)
+console.log(ordenandoEdadesDesc)
+
+// Método FOREACH, nos ayuda a recorrer un arreglo sin tener ningún retorno de datos
+
+const miArreglo = []
+
+languages.forEach(
+  function(language, index) {
+    if (index > 3) {
+      miArreglo.push('hola--' + language)
+    }
+  }
+)
+
+console.log(miArreglo)
+
