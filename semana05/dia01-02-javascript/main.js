@@ -579,3 +579,29 @@ console.log('INCLUDES', languages.includes('java')) // true
 console.log('INCLUDES', languages.includes('cobol')) // false
 console.log('INCLUDES', languages.includes('PYTHON')) // false
 
+// Método MAP, devuelve un arreglo y modifica cada elemento pasando una función(callback)
+// El map siempre devuelve un arreglo nuevo
+
+const nombresConAsterisco = languages.map(function(language) {
+  return language + '*'
+})
+
+console.log(languages) // Este arreglo no cambia
+
+console.log(nombresConAsterisco)
+
+// Método FILTER, nos ayuda a ubicar un elemento dentro de un arreglo usando una condición y devuelve un nuevo arreglo con los resultados
+
+const filteredLanguages = languages.filter(
+  function (language) {
+    // return false
+    // return language === 'java'
+    // return language === 'python'
+    // return language.includes('c')
+    return language.toLowerCase().includes('c')
+  }
+)
+
+console.log(filteredLanguages)
+console.log(languages)
+
