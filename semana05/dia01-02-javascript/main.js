@@ -796,11 +796,19 @@ const nombresFrutas = frutas.map(function(fruta) {
   return fruta.nombre
 })
 
-console.log('¿tenemos "kiwi"?', nombresFrutas.includes('kiwi'))
+console.log('1. ¿tenemos "kiwi"?', nombresFrutas.includes('kiwi'))
 
 // 2. map → obtener solo los precios
 
 // 3. filter → frutas con stock disponible
+const stockDisponible = frutas
+  .filter(function(fruta) {
+    return fruta.cantidad > 0
+  })
+  // .map(function(fruta) {
+  //   return fruta.nombre
+  // })
+console.log('3. stock disponible', stockDisponible)
 
 // 4. reduce → calcular el valor total del inventario
 
@@ -810,5 +818,83 @@ console.log('¿tenemos "kiwi"?', nombresFrutas.includes('kiwi'))
 
 
 // DESTRUCTURING DE ARREGLOS, OBJETOS
+// Una forma de extraer las propiedades/elementos de un objeto o un arreglo en nuevas variables
 
-// 
+// Sin destructuring
+
+const nombreValue = miObjeto.nombre
+const apellidoValue = miObjeto.apellido
+const cursosValue = miObjeto.cursos
+
+console.log(nombreValue, apellidoValue, cursosValue)
+
+// Con destructuring
+
+const { platilloFavorito, colorFavorito, cursos } = miObjeto
+
+console.log(platilloFavorito, colorFavorito, cursos)
+
+// Alias en destructuring de objetos
+
+const {
+  platilloFavorito: platilloFavoritoValor,
+  colorFavorito: colorFavoritoValor,
+  cursos: cursosValor
+} = miObjeto
+
+console.log(platilloFavoritoValor, colorFavoritoValor, cursosValor)
+
+// DESTRUCTURING EN ARRAYS
+
+const amigos = ['leo', 'marcial', 'diego', 'andrea', 'victor']
+
+const [amigo1, amigo2, , amigo3] = amigos
+
+console.log(amigo1, amigo2, amigo3)
+
+// DESTRUCTURING + SPREAD OPERATOR (...)
+
+const [miMejorAmigo, ...losDemas] = amigos
+
+console.log(miMejorAmigo, losDemas)
+
+// SPREAD OPERADOR EN OBJETOS
+
+// Extrae los propiedades de un objeto/arreglo para reutlizarlo en otros objetos/arreglos
+
+const producto = {
+  nombre: 'Laptop',
+  precio: 7599,
+  categoria: 'tech'
+}
+
+const cliente = {
+  nombre: 'Gabriel',
+  isVip: true
+}
+
+console.log(producto + cliente) // ❌ 😵 💔 [object Object][object Object]
+
+const nuevoObjeto2 = { ...producto, ...cliente }
+
+console.log(nuevoObjeto2) // el nombre del producto fue sobreescrito ❓ CUIDADO
+
+// SPREAD OPERATOR EVITANDO "COLISIONES DE PROPIEDADES"
+
+const nuevoObjetoSinColisiones = {
+  producto: { ...producto },
+  cliente: { ...cliente },
+}
+
+console.log(nuevoObjetoSinColisiones)
+console.log(nuevoObjetoSinColisiones.producto.nombre)
+console.log(nuevoObjetoSinColisiones.cliente.nombre)
+
+// OTROS MÉTODOS DE OBJETOS
+
+console.log(Object.keys(producto)) // Obtenemos solo las claves(keys) del objeto
+console.log(Object.values(producto)) // Obtenemos solo las valores(values) del objeto
+console.log(Object.entries(producto)) // Convertimos un objeto en un arreglo y lo que devuelve es un arreglo de arreglos
+
+
+// ES6+ -> 
