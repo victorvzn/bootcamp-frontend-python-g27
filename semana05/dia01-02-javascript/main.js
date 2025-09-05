@@ -696,3 +696,64 @@ languages.forEach(
 
 console.log(miArreglo)
 
+// OBJETOS
+
+/*
+  {
+    KEY: VALUE,
+    KEY2: VALUE2,
+    KEY3: VALUE3
+  }
+*/
+
+const miObjetoVacio = {}
+
+const miObjeto = {
+  nombre: 'Victor',
+  apellido: 'Villazón',
+  colorFavorito: 'azúl',
+  edad: 37,
+  esMayorDeEdad: true,
+  coloresFavoritos: ['rosado', 'rojo', 'azúl'],
+  'mi edad': 39,
+  cursos: [
+    {
+      nombre: 'Matemática',
+      nota: 18
+    },
+    {
+      nombre: 'Algoritmos',
+      nota: 13
+    }
+  ],
+  devolverCursosAprobados: function() {
+    return this.cursos.filter(function(curso) {
+      return curso.nota > 13
+    })
+  }
+}
+
+console.log(miObjetoVacio)
+console.log(miObjeto)
+
+// LEER LOS CAMPOS DE UN OBJETO (notación de punto y de corchete)
+
+console.log(miObjeto.nombre) // Victor
+console.log(miObjeto.apellido) // Villazón
+console.log(miObjeto.edad) // 37
+
+// console.log(miObjeto.mi edad) // BAD ❌ - Uncaught SyntaxError: missing ) after argument list
+console.log(miObjeto['mi edad']) // OK ✅
+
+console.log(miObjeto.coloresFavoritos) // ['rosado', 'rojo', 'azúl']
+console.log(miObjeto.coloresFavoritos[2]) // azúl
+
+console.log(miObjeto.cursos)
+console.log(miObjeto.cursos[1])
+console.log(miObjeto.cursos[1].nombre)
+console.log(miObjeto.cursos[1].nota)  // 13 con la notación de punto
+console.log(miObjeto.cursos[1]['nota']) // 13 con la notación de corchete
+
+console.log(miObjeto.devolverCursosAprobados)
+console.log(miObjeto.devolverCursosAprobados())
+
