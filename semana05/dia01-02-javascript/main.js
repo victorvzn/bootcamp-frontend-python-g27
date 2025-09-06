@@ -944,6 +944,7 @@ console.log(otroSaludoEnMayusculasArrowFn('victor'))
 
 // Template strings (template literals) 
 // Otra forma de crear cadenas de texto
+// backticks (`)
 
 const unNombre = 'Victor'
 const unaEdad = 39
