@@ -5,7 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Javascript + DOM: Key event detect</title>
 </head>
+
 <body>
   <h1>Javascript + DOM: Key event detect</h1>
+
+  <main>
+    <h1>JS Key Detect</h1>
+
+    <h2 id="keycode">00</h2>
+    <h3 id="character">A</h3>
+  </main>
+
+  <script>
+    const key = document.getElementById('keycode')
+    const character = document.querySelector('#character')
+
+    // console.log(key)
+    // key.textContent = '09'
+
+    document.addEventListener('keydown', function(event) {
+      console.log('Presionaste una tecla!!', event)
+
+      console.log(event.keyCode) // Código ASCII
+      console.log(event.key) // letra
+
+      key.textContent = event.keyCode
+      character.textContent = event.key
+    })
+  </script>
 </body>
 </html>
