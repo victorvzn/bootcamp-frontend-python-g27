@@ -33,6 +33,12 @@ taskAdd.addEventListener('click', function(event) {
 
   taskList.appendChild(li)
 
+  // taskList.innerHTML = `<li>
+  //   <input type="checkbox" />
+  //   <span>Tarea 1</span>
+  //   <button>Borrar</button>
+  // </li>`
+
   // TODO: 02 Limpiar la caja de texto después de crear la tarea
 
 })
