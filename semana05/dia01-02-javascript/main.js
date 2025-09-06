@@ -941,3 +941,37 @@ const otroSaludoEnMayusculasArrowFn = (nombre='Anónimo') => {
 
 console.log(otroSaludoEnMayusculasArrowFn())
 console.log(otroSaludoEnMayusculasArrowFn('victor'))
+
+// Template strings (template literals) 
+// Otra forma de crear cadenas de texto
+
+const unNombre = 'Victor'
+const unaEdad = 39
+
+// const mensaje = 'Hola, me llamo ' + unNombre + ' y tengo ' + unaEdad + ' años.'
+const mensaje = `Hola, me llamo ${unNombre}
+y tengo ${unaEdad} años.
+Y la suma de 49 + 96 es ${49 + 96}.`
+
+console.log(mensaje)
+
+// Parámetros rest (operador rest -> ...)
+
+const listaDeNumeros = [4, 5]
+
+function miSuma(n1, n2) {
+  return n1 + n2
+}
+
+console.log(miSuma(4, 5)) // 9
+console.log(miSuma(listaDeNumeros)) // ❌ 4,5undefined
+console.log(miSuma(...listaDeNumeros)) // 9
+
+// Otro ejemplo 
+
+const listaDeNumeros2 = [25, 8, 288, 65, 76, 189, 66]
+
+console.log(Math.max(25, 8, 88, 65, 99, 828)) // 828
+console.log(Math.max(listaDeNumeros2)) // NaN
+console.log(Math.max(...listaDeNumeros2)) // 288
+
