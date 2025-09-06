@@ -37,6 +37,7 @@ buttons.forEach(function(button) {
         numeroActual = Number(operando) * Number(numeroActual)
       }
     } else if (buttonText === 'CE') {
+      // Cuando presionamos el botón 'CE'
       // 4. Limpiamos operando, operador y e input
       numeroActual = '0'
       operador = ''
