@@ -897,4 +897,47 @@ console.log(Object.values(producto)) // Obtenemos solo las valores(values) del o
 console.log(Object.entries(producto)) // Convertimos un objeto en un arreglo y lo que devuelve es un arreglo de arreglos
 
 
-// ES6+ -> 
+// ES6+ -> ECMASCRIPT 2025 (Es el standard)
+
+// Arrow function, let, const, template strings, destructuring, clases, modulos, promesas
+
+// ARROW FUNCTION: () => {}
+
+// function nombreDelaFuncion(parametro1, parametro2) {
+//   return 'Hola a todos'
+// }
+
+// nombreDeLaFuncion()
+
+// Funciones con parámetros en un línea
+
+const imprimirSaludoArrowFn = () => console.log('Hola a todos nuevamente!')
+
+imprimirSaludoArrowFn()
+
+// Funciones con parámetros en un línea con retorno implícito
+
+const sumaArrowFn = (numero1, numero2) => numero1 + numero2
+
+console.log(sumaArrowFn(2, 5))
+
+// Funciones con parámetros y retorno explícito en múltiples líneas con retorno explícito
+
+const saludoEnMayusculasArrowFn = (nombre) => {
+  const nombreEnMayuscula = nombre.toUpperCase()
+
+  return 'Hola ' + nombreEnMayuscula + '!!'
+}
+
+console.log(saludoEnMayusculasArrowFn('victor'))
+
+// Funciones con parámetros por defecto y retorno explícito en múltiples líneas
+
+const otroSaludoEnMayusculasArrowFn = (nombre='Anónimo') => {
+  const nombreEnMayuscula = nombre.toUpperCase()
+
+  return 'Hola ' + nombreEnMayuscula + '!!'
+}
+
+console.log(otroSaludoEnMayusculasArrowFn())
+console.log(otroSaludoEnMayusculasArrowFn('victor'))
