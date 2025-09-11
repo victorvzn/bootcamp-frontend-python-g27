@@ -19,15 +19,15 @@
 
 // PRIMITIVOS: Number, String, Boolean (true, false), undefined, null, BigInt, Symbol...
 
-// NUMBERS
+// NUMBERS, para js enteros, decimal, son Numbers
 
 console.log(20)
 console.log(20.50)
 console.log(-36)
 
-console.log(typeof 20)
-console.log(typeof 20.50)
-console.log(typeof -36)
+console.log(typeof 20) // number
+console.log(typeof 20.50) // number
+console.log(typeof -36) // number
 
 // STRING o Cadenas de texto
 
@@ -35,9 +35,9 @@ console.log('Gabriel')
 console.log("Bryan")
 console.log('500')
 
-console.log(typeof 'Gabriel')
-console.log(typeof "Bryan")
-console.log(typeof '500')
+console.log(typeof 'Gabriel') // string
+console.log(typeof "Bryan") // string
+console.log(typeof '500') // string
 
 // BOOLEAN -> verdadero(true) o falso(false)
 
@@ -50,8 +50,8 @@ console.log(typeof true)
 
 let nombre // No hemos asignado un valor a la variable
 
-console.log(nombre)
-console.log(typeof nombre)
+console.log(nombre) // undefined
+console.log(typeof nombre) // undefined
 
 // NULL
 
@@ -130,7 +130,7 @@ console.log(1 == 1) // true
 console.log(1 == '1') // true ❓
 console.log(1 != '1') // false ❓
 
-// Operador de igualdad estricta (===)
+// Operador de igualdad estricta (===) ES MEJOR USARLO
 // Devuelve un valor booleano (true o false)
 // Este operador si toma en cuenta el tipo de dato y sus valores al comparar.
 
