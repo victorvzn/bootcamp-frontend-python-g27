@@ -50,14 +50,19 @@ taskAdd.addEventListener('click', function(event) {
 taskList.addEventListener('click', function(event) {
   // console.log('Hice click en cualquier parte de la lista ul')
 
-  const botonPresionado = event.target // Elemento presionado
+  const target = event.target // Elemento presionado
 
   // console.log({ target })
 
-  if (botonPresionado.tagName === 'BUTTON') {
-    console.log('Eliminando tarea...', { el: botonPresionado.parentElement })
+  if (target.tagName === 'BUTTON') {
+    console.log('Eliminando tarea...', { el: target.parentElement })
 
-    botonPresionado.parentElement.remove()
+    target.parentElement.remove()
+  }
+
+  if(target.tagName === 'INPUT' && target.type === 'checkbox') {
+    console.log('Completando tarea...')
+    target.classList.toggle('checked')
   }
   // } else {
   //   console.log('Presionaste otra etiqueta')
