@@ -47,3 +47,17 @@ taskAdd.addEventListener('click', function(event) {
 })
 
 // TODO: 03 permitir al botón borrar remover una tarea de la lista
+taskList.addEventListener('click', function(event) {
+  // console.log('Hice click en cualquier parte de la lista ul')
+
+  const target = event.target // Elemento presionado
+
+  // console.log({ target })
+
+  if (target.tagName === 'BUTTON') {
+    console.log('Eliminando tarea...')
+  }
+  // } else {
+  //   console.log('Presionaste otra etiqueta')
+  // }
+})
