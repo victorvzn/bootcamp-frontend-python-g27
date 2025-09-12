@@ -20,6 +20,9 @@ taskAdd.addEventListener('click', function(event) {
   const li = document.createElement('li')
 
   // TODO: 01 Añadir un checkbox al li
+  const checkbox = document.createElement('input')
+  checkbox.setAttribute('type', 'checkbox')
+  li.appendChild(checkbox) // Añadiendo el checkbox dentro del li
 
   // DONE: 02 Añadir el elemento span al elemento li
   const span = document.createElement('span')
