@@ -40,7 +40,7 @@ taskAdd.addEventListener('click', function(event) {
   // </li>`
 
   // TODO: 02 Limpiar la caja de texto después de crear la tarea
-
+  taskInput.value = ''
 })
 
 // TODO: 03 permitir al botón borrar remover una tarea de la lista
