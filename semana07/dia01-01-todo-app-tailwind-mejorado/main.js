@@ -2,7 +2,7 @@ const taskInput = document.querySelector('.task__input')
 const taskButtonClear = document.querySelector('.task__clear')
 const taskList = document.querySelector('.task__list')
 
-const tasks = [
+let tasks = [
   {
     id: 'tarea-1',
     title: 'Estudiar Javascript',
@@ -35,12 +35,14 @@ function renderTasks(tasks = []) {
         </div>
         <div class="flex gap-2">
           <button
-            class="border border-green-700 font-medium text-sm px-2 py-1 text-green-700 rounded-lg hover:bg-green-700 hover:text-white duration-300"
+            class="task-item__edit border border-green-700 font-medium text-sm px-2 py-1 text-green-700 rounded-lg hover:bg-green-700 hover:text-white duration-300"
           >
             ✏
           </button>
           <button
-            class="border border-red-700 font-medium text-sm px-2 py-1 text-red-700 rounded-lg hover:bg-red-700 hover:text-white duration-300"
+            class="task-item__remove border border-red-700 font-medium text-sm px-2 py-1 text-red-700 rounded-lg hover:bg-red-700 hover:text-white duration-300"
+            data-id="${task.id}"
+            data-nombre="holaquetal"
           >
             ❌
           </button>
@@ -55,7 +57,6 @@ function renderTasks(tasks = []) {
 
 // 01 - Al presionar enter en la caja de texto debemos agregar una nueva tarea a lista(arreglo tasks)
 taskInput.addEventListener('keydown', (event) => {
-  
   if (event.key === 'Enter') {
     // lógica para agregar una nueva tarea
     console.log(event.key) // El nombre de la tecla presionada
@@ -74,8 +75,28 @@ taskInput.addEventListener('keydown', (event) => {
     renderTasks(tasks)
 
     taskInput.value = ''
-  }
 
+    console.log(tasks)
+  }
+})
+
+taskList.addEventListener('click', (event) => {
+  const { target } = event
+
+  console.log(target.dataset)
+  
+  if(
+    target.tagName === 'BUTTON' && 
+    target.classList.contains('task-item__remove')
+  ) {
+    const { id } = target.dataset // Id que queremos eliminar
+
+    console.log('Eliminando tarea...', id)
+
+    tasks = tasks.filter(task => task.id !== id)
+
+    renderTasks(tasks)
+  }
 })
 
 renderTasks(tasks)
