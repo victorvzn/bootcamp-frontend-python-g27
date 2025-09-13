@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Localstorage</title>
+</head>
+<body>
+  <h1>Localstorage</h1>
+
+  <script>
+    // Localstorage: 
+    // Lo encontramos en el Inspector/application
+
+    // Escritura de LS
+    localStorage.setItem('frutas', 'manzana,pera,plátano')
+    localStorage.setItem('colores', ['rojo', 'verde', 'amarillo'])
+    localStorage.setItem('colores2', JSON.stringify(['rojo', 'verde', 'amarillo']))
+    localStorage.setItem('persona', { edad: 39 })
+    localStorage.setItem('persona2', JSON.stringify({ edad: 39 }))
+    localStorage.setItem('curso', JSON.stringify({ name: 'Algoritmos', nota: 19 }))
+
+    // Lectura de LS
+    console.log(localStorage.getItem('frutas'))
+    console.log(localStorage.getItem('persona'))
+    console.log(localStorage.getItem('persona2'))
+    console.log(typeof localStorage.getItem('persona2'))
+
+    console.log(localStorage.getItem('curso'))
+    console.log(JSON.parse(localStorage.getItem('curso')))
+
+    // ¿Qué pasa si no existe la clave?
+    console.log(localStorage.getItem('keyQueNoExiste')) // null (Podemos usarlo para validar que no exista la key en ls)
+
+    // Eliminar de elementos en LS
+    localStorage.removeItem('frutas')
+  </script>
+</body>
+</html>
