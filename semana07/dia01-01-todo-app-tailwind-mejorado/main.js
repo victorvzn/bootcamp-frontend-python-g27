@@ -11,7 +11,7 @@ let tasks = [
   {
     id: 'tarea-2',
     title: 'Salir al receso',
-    completed: true
+    completed: false
   },
   {
     id: 'tarea-3',
@@ -23,14 +23,21 @@ let tasks = [
 function renderTasks(tasks = []) {
   // console.log('Renderizando tasks...', tasks)
 
+  // operador Ternario
+  // false ? 'Verdadera' : 'False'
+
   let list = ''
 
   tasks.forEach(task => {
     console.log(task)
     list = list + `
       <li class="flex justify-center items-center gap-4 py-1">
-        <input type="checkbox" />
-        <div class="w-full">
+        <input
+          type="checkbox"
+          data-id="${task.id}"
+          ${task.completed ? 'checked' : ''}
+        />
+        <div class="w-full ${task.completed ? 'line-through' : ''}">
           ${task.title}
         </div>
         <div class="flex gap-2">
@@ -99,6 +106,27 @@ taskList.addEventListener('click', (event) => {
   }
 
   // TODO: Al presionar el check debe completarse la tarea en el arreglo de tasks
+  if (
+    target.tagName === 'INPUT' && 
+    target.type === 'checkbox'
+  ) {
+    console.log('Completando tarea...')
+
+    const { id } = target.dataset // Id que queremos eliminar
+
+    const taskSelectedIndex = tasks.findIndex(task => {
+      return task.id === id
+    })
+
+    tasks[taskSelectedIndex] = {
+      ...tasks[taskSelectedIndex],
+      completed: !tasks[taskSelectedIndex].completed
+    }
+
+    renderTasks(tasks)
+
+    console.log(tasks)
+  }
 })
 
 renderTasks(tasks)
