@@ -53,4 +53,16 @@ function renderTasks(tasks = []) {
   taskList.innerHTML = list
 }
 
+// 01 - Al presionar enter en la caja de texto debemos agregar una nueva tarea a lista(arreglo tasks)
+taskInput.addEventListener('keydown', (event) => {
+  
+  if (event.key === 'Enter') {
+    // lógica para agregar una nueva tarea
+    console.log(event.key) // El nombre de la tecla presionada
+
+    
+  }
+
+})
+
 renderTasks(tasks)
