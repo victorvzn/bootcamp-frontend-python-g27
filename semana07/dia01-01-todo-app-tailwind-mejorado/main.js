@@ -131,5 +131,12 @@ taskList.addEventListener('click', (event) => {
 
 // TODO: Al hacer click en el botón 'Limpiar tareas completadas' debemos remover todas las tareas completadas. Hay que llamar al método render también.
 
+taskButtonClear.addEventListener('click', (event) => {
+  const incompletedTasks = tasks.filter(task => !task.completed)
+
+  tasks = incompletedTasks
+
+  renderTasks(tasks)
+})
 
 renderTasks(tasks)
