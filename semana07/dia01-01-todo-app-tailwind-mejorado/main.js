@@ -97,6 +97,8 @@ taskList.addEventListener('click', (event) => {
 
     renderTasks(tasks)
   }
+
+  // TODO: Al presionar el check debe completarse la tarea en el arreglo de tasks
 })
 
 renderTasks(tasks)
