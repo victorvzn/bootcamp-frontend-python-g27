@@ -60,7 +60,20 @@ taskInput.addEventListener('keydown', (event) => {
     // lógica para agregar una nueva tarea
     console.log(event.key) // El nombre de la tecla presionada
 
-    
+    // const value = event.target.value
+    const { value } = event.target
+
+    const newTask = {
+      id: crypto.randomUUID(),
+      title: value,
+      completed: false
+    }
+
+    tasks.push(newTask)
+
+    renderTasks(tasks)
+
+    taskInput.value = ''
   }
 
 })
