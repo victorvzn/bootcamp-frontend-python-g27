@@ -14,5 +14,37 @@
     <button id="anterior">Anterior</button>
     <button id="siguiente">Siguiente</button>
   </div>
+
+  <script>
+    const imagenes = [
+      "https://picsum.photos/id/1/200/300",
+      "https://picsum.photos/id/2/200/300",
+      "https://picsum.photos/id/3/200/300",
+      "https://picsum.photos/id/4/200/300",
+      "https://picsum.photos/id/5/200/300",
+    ]
+
+    // const botonAnterior = document.getElementById('anterior')
+    const botonAnterior = document.querySelector('#anterior')
+    const botonSiguiente = document.querySelector('#siguiente')
+    const galeria = document.querySelector('#galeria')
+
+    let index = 0
+
+    botonSiguiente.addEventListener('click', () => {
+      index += 1
+
+      if (index > imagenes.length - 1) {
+        return
+      }
+
+      galeria.src = imagenes[index]
+      console.log('Siguiente', index)
+    })
+
+    botonAnterior.addEventListener('click', () => {
+      console.log('Anterior')
+    })
+  </script>
 </body>
 </html>
