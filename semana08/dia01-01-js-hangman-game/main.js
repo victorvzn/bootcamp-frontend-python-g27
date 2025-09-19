@@ -5,6 +5,8 @@ const botonReiniciar = document.querySelector('.ahorcado__reiniciar')
 
 // palabraOculta.textContent = 'HOLA A TODOS'
 
+let letrasAdivinadas = ''
+
 const PALABRA_RESPUESTA = 'JAVASCRIPT'
 
 const ALFABETO = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('') // Un arreglo
@@ -17,7 +19,16 @@ const renderizarAlfabeto = () => {
 
     boton.className = 'bg-blue-500 p-2 text-white font-bold text-xl cursor-pointer hover:bg-blue-600 duration-300 rounded'
 
-    boton.addEventListener('click', () => console.log(letra))
+    boton.addEventListener('click', () => {
+      letrasAdivinadas += letra
+
+      console.log('letrasAdivinadas', letrasAdivinadas)
+
+      palabraOculta.textContent = PALABRA_RESPUESTA
+        .split('')
+        .map(letra => letrasAdivinadas.includes(letra) ? letra : '_' )
+        .join('')
+    })
 
     botones.appendChild(boton)
   })
