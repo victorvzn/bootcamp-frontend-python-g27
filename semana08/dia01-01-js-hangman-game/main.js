@@ -28,6 +28,12 @@ const renderizarAlfabeto = () => {
         .split('')
         .map(letra => letrasAdivinadas.includes(letra) ? letra : '_' )
         .join('')
+      
+      if (!palabraOculta.textContent.includes('_')) {
+        console.log('Ganaste!')
+
+        botonReiniciar.classList.toggle('hidden')
+      }
     })
 
     botones.appendChild(boton)
@@ -43,5 +49,7 @@ const renderizarAlfabeto = () => {
 
   // botones.innerHTML = contenido
 }
+
+// TODO: Reiniciar el juego al presionar el boton '¡Empezar de nuevo!
 
 renderizarAlfabeto()
