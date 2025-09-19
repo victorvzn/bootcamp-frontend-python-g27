@@ -4,8 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hangman Game + Javascript</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-  <h1>Hangman Game + Javascript</h1>
+  <main>
+    <h1 class="text-3xl">Hangman Game + Javascript</h1>
+
+    <!-- Palabra oculta -->
+    <p>_________</p>
+
+    <section>
+      <button>A</button>
+      <button>B</button>
+      <button>C</button>
+      <button>...</button>
+      <button>Z</button>
+    </section>
+
+    <section>
+      ¡GANASTE!
+    </section>
+
+    <button>
+      ¡Empezar de nuevo!
+    </button>
+  </main>
+
+  <script src="main.js"></script>
 </body>
 </html>
