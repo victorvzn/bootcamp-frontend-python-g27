@@ -52,4 +52,12 @@ const renderizarAlfabeto = () => {
 
 // TODO: Reiniciar el juego al presionar el boton '¡Empezar de nuevo!
 
+botonReiniciar.addEventListener('click', () => {
+  letrasAdivinadas = ''
+
+  palabraOculta.textContent = '_________'
+
+  botonReiniciar.classList.toggle('hidden')
+})
+
 renderizarAlfabeto()
