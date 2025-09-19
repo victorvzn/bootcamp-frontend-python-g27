@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dibujar en un div</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="h-screen flex items-center justify-center bg-gray-100">
+  <main class="flex flex-col items-center">
+    <h1 class="text-2xl font-bold mb-4">🎨 Dibujar en un div</h1>
+    
+    <div 
+      id="canvas"
+      class="relative w-[400px] h-[300px] bg-white border-2 border-gray-400 rounded-lg cursor-crosshair"
+    ></div>
+
+    <button id="limpiar" class="py-2 px-4 bg-amber-300 rounded-lg mt-4">Limpiar todo</button>
+  </main>
+
+  <script>
+    const canvas = document.getElementById("canvas");
+    const botonLimpiar = document.getElementById('limpiar')
+
+    canvas.addEventListener("click", (event) => {
+      // Obtener posición relativa dentro del div
+      const rect = canvas.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+
+      // Crear un cuadrado
+      const square = document.createElement("div");
+
+      square.className = "absolute w-6 h-6 bg-green-500 rounded-sm flex justify-center items-center text-white";
+      square.style.left = `${x - 8}px`; // centramos un poco
+      square.style.top = `${y - 8}px`;
+      square.textContent = '👽'
+
+      canvas.appendChild(square);
+    });
+
+    botonLimpiar.addEventListener('click', () => {
+      canvas.innerHTML = ''
+    })
+  </script>
+</body>
+</html>
