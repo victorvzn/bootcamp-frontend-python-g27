@@ -10,15 +10,27 @@ const PALABRA_RESPUESTA = 'JAVASCRIPT'
 const ALFABETO = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('') // Un arreglo
 
 const renderizarAlfabeto = () => {
-  let contenido = ''
-
   ALFABETO.forEach(letra => {
-    contenido = contenido + `
-      <button class="bg-blue-500 p-2 text-white font-bold text-xl cursor-pointer hover:bg-blue-600 duration-300 rounded">${letra}</button>
-    `
+    const boton = document.createElement('button')
+    
+    boton.textContent = letra
+
+    boton.className = 'bg-blue-500 p-2 text-white font-bold text-xl cursor-pointer hover:bg-blue-600 duration-300 rounded'
+
+    boton.addEventListener('click', () => console.log(letra))
+
+    botones.appendChild(boton)
   })
 
-  botones.innerHTML = contenido
+  // let contenido = ''
+
+  // ALFABETO.forEach(letra => {
+  //   contenido = contenido + `
+  //     <button class="bg-blue-500 p-2 text-white font-bold text-xl cursor-pointer hover:bg-blue-600 duration-300 rounded">${letra}</button>
+  //   `
+  // })
+
+  // botones.innerHTML = contenido
 }
 
 renderizarAlfabeto()
