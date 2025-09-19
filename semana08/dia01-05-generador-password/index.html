@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="h-screen flex items-center justify-center bg-gray-100">
+  <main class="bg-white p-6 rounded-2xl shadow-lg w-96 text-center">
+    <h1 class="text-2xl font-bold mb-4">Generador de contraseña</h1>
+
+    <button 
+      id="generateBtn"
+      class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 w-full">
+      Generar contraseña
+    </button>
+
+    <div class="flex items-center justify-between gap-2">
+      <p class="flex-2 mt-4 text-lg font-mono bg-gray-200 py-2 rounded-lg" id="password">
+        (tu password aquí)
+      </p>
+
+      <button 
+        id="copyBtn"
+        class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 mt-3">
+        Copiar
+      </button>
+    </div>
+  </main>
+
+  <script>
+    const characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
+
+    function generatePassword(length = 10) {
+      let password = "";
+
+      for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+
+        password += characters[randomIndex];
+      }
+
+      return password;
+    }
+
+    const btn = document.getElementById("generateBtn");
+    const passwordEl = document.getElementById("password");
+    const copyBtn = document.getElementById("copyBtn");
+
+    btn.addEventListener("click", () => {
+      const newPassword = generatePassword(16); // Puedes cambiar el tamaño
+      passwordEl.textContent = newPassword;
+    });
+
+    copyBtn.addEventListener("click", () => {
+      const password = passwordEl.textContent;
+
+      if (password && password.trim() !== "(tu password aquí)") {
+        // Clipboard API
+
+        navigator.clipboard.writeText(password)
+          .then(() => {
+            console.log("✅ Contraseña copiada al clipboard!");
+          })
+          .catch(() => {
+            console.log("❌ Error copiando al clipboard.");
+          });
+      }
+    });
+  </script>
+</body>
+</html>
