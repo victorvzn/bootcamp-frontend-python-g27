@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de frases aleatorias</title>
+</head>
+<body>
+  <h1>Generador de frases aleatorias</h1>
+
+  <div id="frase">Haz click en el botón para ver una frase nueva</div>
+
+  <button id="boton">Nueva frase</button>
+
+  <script>
+    console.log(Math.random()) // genera un número aleatorio entre 0 y 1
+    console.log(Math.floor(Math.random())) // 
+    console.log(Math.floor(Math.random() * 10)) // genera un valor entre 0 y 3
+
+
+    const frases = [
+      "El éxito es la suma de pequeños esfuerzos repetidos día tras día.",
+      "La mejor manera de empezar es dejar de hablar y ponerse a hacer.",
+      "Nunca es demasiado tarde para ser lo que podrías haber sido.",
+      "El único modo de hacer un gran trabajo es amar lo que haces.",
+      "Haz de cada día tu obra maestra."
+    ]
+
+    const boton = document.querySelector('#boton')
+    const frase = document.querySelector('#frase')
+
+    boton.addEventListener('click', () => {
+      const indiceAleatorio = Math.floor(Math.random() * frases.length) // indice aleatorio entre 0 y 4
+
+      console.log(indiceAleatorio)
+
+      frase.textContent = frases[indiceAleatorio]
+    })
+
+    // TODO: Generen un número aleatorio dentro de un rango. Ejemplo: entre 3 y 9 -> 4
+  </script>
+</body>
+</html>
