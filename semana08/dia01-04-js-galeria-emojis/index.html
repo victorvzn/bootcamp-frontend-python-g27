@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Emojis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    #visor {
+      font-size: 4rem;
+      margin: 20px 0;
+    }
+    .emoji {
+      font-size: 2rem;
+      cursor: pointer;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Galería de Emojis</h1>
+
+  <div id="visor">❓</div>
+  <div id="galeria"></div>
+
+  <script>
+    const emojis = [
+      "😀","😁","😂","🤣","😃","😄","😅","😆","😉","😊",
+      "😋","😎","😍","😘","🥰","😗","😙","😚","🙂","🤗",
+      "🤔","😐","😑","😶","🙄","😏","😣","😥","😮","🤐",
+      "😯","😪","😫","🥱","😴","😌","🤤","😛","😜","🤪",
+      "😝","🤑","🤠","😲","🙁","☹️","😖","😞","😟","😤"
+    ];
+    const galeria = document.getElementById("galeria");
+    const visor = document.getElementById("visor");
+
+    // Crear la galería dinámicamente
+    emojis.forEach(emoji => {
+      const span = document.createElement("span");
+      span.textContent = emoji;
+      span.classList.add("emoji");
+
+      // Evento de clic
+      span.addEventListener("click", () => {
+        visor.textContent = emoji;
+      });
+
+      galeria.appendChild(span);
+    });
+  </script>
+</body>
+</html>
