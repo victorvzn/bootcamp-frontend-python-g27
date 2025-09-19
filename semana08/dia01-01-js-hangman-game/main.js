@@ -57,7 +57,7 @@ botonReiniciar.addEventListener('click', () => {
 
   palabraOculta.textContent = '_________'
 
-  botonReiniciar.classList.toggle('hidden')
+  botonReiniciar.classList.toggle('hidden') // Oculta nuevamente el boton reiniciar
 })
 
 renderizarAlfabeto()
