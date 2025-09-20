@@ -48,7 +48,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     posts.forEach(post => {
       postsList += `
         <article>
-          <h2>${post.id} - ${post.title}</h2>
+          <h3>${post.id} - ${post.title}</h3>
           <p>${post.body}</p>
         </article>
       `
@@ -72,7 +72,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
     users.forEach(user => {
       usersList += `
         <article>
-          <h2>${user.id} - ${user.name}</h2>
+          <h3>${user.id} - ${user.name}</h3>
           <p>${user.company.name}</p>
         </article>
       `
