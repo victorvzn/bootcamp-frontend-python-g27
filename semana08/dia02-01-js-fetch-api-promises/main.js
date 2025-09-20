@@ -16,3 +16,9 @@
 
 // OBJETIVO: Consultar información en formato JSON desde una URL desde JS
 
+console.log(fetch('https://jsonplaceholder.typicode.com/posts')) // Devuelve una promesa (Promise) -> Promise {<pending>}
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(response => response.json())
+  .then(data => console.log(data))
+
