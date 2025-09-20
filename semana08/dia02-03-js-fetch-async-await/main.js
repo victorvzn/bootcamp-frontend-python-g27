@@ -1,7 +1,7 @@
 // OBJETIVO: Realizar peticiones HTTP asícronas mediante el API fetch usando async/await
 
 // 01 - PROMISES
-fetch('https://jsonplaceholder.typicode.com/users-asdlkamsldkmaldmas')
+fetch('https://jsonplaceholder.typicode.com/users')
   // Necesitammos averiguar si llegó una respuesta correcta o un error
   // usamos .then para procesar la respusta correcta
   .then(response => {
@@ -19,7 +19,7 @@ fetch('https://jsonplaceholder.typicode.com/users-asdlkamsldkmaldmas')
   .catch(error => console.log(error))
 
 
-const url = 'https://jsonplaceholder.typicode.com/users-no-existe'
+const url = 'https://jsonplaceholder.typicode.com/users'
 
 const fetchUsersSinRetorno = async () => { // Retorna una promesa (Promise)
   const response = await fetch(url)
