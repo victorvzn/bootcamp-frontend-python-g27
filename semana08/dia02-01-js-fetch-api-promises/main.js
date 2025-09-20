@@ -60,5 +60,4 @@ fetch('https://jsonplaceholder.typicode.com/posts')
   })
 
   // TODO: Renderizar todos los users en la página mostrando su id, name y company name
-
-  
+  // https://jsonplaceholder.typicode.com/users
