@@ -54,6 +54,6 @@ fetch('https://dragonball-api.com/api/planets')
   .then(response => response.json())
   .then(data => {
     // console.log(data)
-    
+
     renderPlanetas(data.items)
   })
