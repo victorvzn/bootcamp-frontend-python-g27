@@ -36,3 +36,29 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 // * 404 Not Found
 // * 500 Internal Server Error
 
+// DONE: Renderizar todos los posts en la página mostrando su id, title y body
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(response => response.json())
+  .then(posts => {
+    const divApp = document.querySelector('#app')
+
+    let postsList = ''
+
+    posts.forEach(post => {
+      postsList += `
+        <article>
+          <h2>${post.id} - ${post.title}</h2>
+          <p>${post.body}</p>
+        </article>
+      `
+    });
+
+    console.log(postsList)
+
+    divApp.innerHTML = postsList
+  })
+
+  // TODO: Renderizar todos los users en la página mostrando su id, name y company name
+
+  
