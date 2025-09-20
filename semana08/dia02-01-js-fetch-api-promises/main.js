@@ -19,6 +19,20 @@
 console.log(fetch('https://jsonplaceholder.typicode.com/posts')) // Devuelve una promesa (Promise) -> Promise {<pending>}
 
 fetch('https://jsonplaceholder.typicode.com/posts')
-  .then(response => response.json())
-  .then(data => console.log(data))
+  .then(response => response.json()) // Convertimos la respuesta a un objeto JS
+  .then(data => {
+    console.log(data) // Aquí podemos usar el objeto JS
+
+    console.log(data[0].title)
+  })
+
+// STATUS CODE: 
+// * 200 OK
+// * 201 Created
+// * 204 No Content
+// * 400 Bad Request
+// * 401 Unauthorized
+// * 403 Forbidden
+// * 404 Not Found
+// * 500 Internal Server Error
 
