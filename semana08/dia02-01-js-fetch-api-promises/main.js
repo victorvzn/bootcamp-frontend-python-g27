@@ -62,21 +62,25 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 // TODO: Renderizar todos los users en la página mostrando su id, name y company name
 // https://jsonplaceholder.typicode.com/users
 
+function renderUsers(users) {
+  const divUsers = document.querySelector('#users')
+
+  let usersList = ''
+
+  users.forEach(user => {
+    usersList += `
+      <article>
+        <h3>${user.id} - ${user.name}</h3>
+        <p>${user.company.name}</p>
+      </article>
+    `
+  })
+  
+  divUsers.innerHTML = usersList
+}
+
 fetch('https://jsonplaceholder.typicode.com/users')
   .then(response => response.json())
   .then(users => {
-    const divUsers = document.querySelector('#users')
-
-    let usersList = ''
-
-    users.forEach(user => {
-      usersList += `
-        <article>
-          <h3>${user.id} - ${user.name}</h3>
-          <p>${user.company.name}</p>
-        </article>
-      `
-    })
-    
-    divUsers.innerHTML = usersList
+    renderUsers(users)
   })
