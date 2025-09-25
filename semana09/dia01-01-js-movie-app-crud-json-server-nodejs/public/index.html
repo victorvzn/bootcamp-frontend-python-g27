@@ -5,8 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CRUD de Películas con json-server</title>
   <!-- CRUD - CREATE(post) / READ(get) / UPDATE(put/patch) / DELETE(delete) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+  >
 </head>
 <body>
-  <h1>CRUD de Películas con json-server</h1>
+  <nav class="container-fluid">
+    <ul>
+      <li>
+        <strong>CRUD de Películas con json-server</strong>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="container-fluid">
+    <div class="grid">
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                111
+              </td>
+              <td>
+                <img
+                  src="https://placehold.co/100x150"
+                />
+              </td>
+              <td>
+                <strong>Nombre</strong>
+                <div>
+                  <strong>Release:</strong> 2025-09-25
+                </div>
+                <div>
+                  <strong>Summary:</strong> resumen...
+                </div>
+              </td>
+              <td>
+                <div>
+                  <button>
+                    ✏
+                  </button>
+                  <button>
+                    ❌
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        FORMULARIO
+      </div>
+    </div>
+  </main>
 </body>
 </html>
