@@ -71,6 +71,17 @@
       "release": "2023-04-05",
       "genreId": 3,
       "summary": "Resumen de prueba"
+    },
+    {
+      "id": 10
+    },
+    {
+      "name": "Spiderman",
+      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+      "release": "2025-09-25",
+      "genreId": 1,
+      "summary": "resumen de prueba",
+      "id": 11
     }
   ]
 }
