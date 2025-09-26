@@ -65,7 +65,23 @@
         </table>
       </div>
       <div>
-        FORMULARIO
+        <form>
+          <h2>Nueva película</h2>
+
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="text" name="image" placeholder="Image" required />
+          <input type="date" name="release" placeholder="Release" required />
+          <select name="genreId" required>
+            <option value="">Select a genre</option>
+            <option value="1">Comedia</option>
+            <option value="2">Acción</option>
+            <option value="3">Animación</option>
+            <option value="4">Aventura</option>
+          </select>
+          <textarea name="summary" placeholder="Summary"></textarea>
+
+          <input type="submit" value="Guardar" />
+        </form>
       </div>
     </div>
   </main>
