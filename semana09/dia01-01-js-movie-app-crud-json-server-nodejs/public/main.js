@@ -74,16 +74,27 @@ moviesForm.addEventListener('submit', async (event) => {
     summary
   }
 
-  const response = await createMovie(newMovie)
+  try {
+    const response = await createMovie(newMovie)
 
-  console.log(response)
+    console.log(response)
 
-  // 3. Actualizar la lista de películas
-  const movies = await fetchMovies()
+    if (!response.ok) {
+      console.log('La película no se guardó correctamente')
+      return
+    }
 
-  renderMovies(movies)
+    // 3. Actualizar la lista de películas
+    const movies = await fetchMovies()
 
-  // 4. Limpiamos el formulario
+    renderMovies(movies)
+
+    // 4. Limpiamos el formulario
+    
+  } catch(error) {
+    console.log(error) // Errores inesperados
+  }
+
   peliculaForm.reset()
 })
 
