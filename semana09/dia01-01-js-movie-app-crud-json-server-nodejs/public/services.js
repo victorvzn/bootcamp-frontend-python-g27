@@ -19,3 +19,7 @@ export const createMovie = async (form) => {
 
   return await response.json()
 }
+
+export const deleteMovie = async () => {
+  // Aquí va la lógica para eliminar una película
+}

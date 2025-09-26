@@ -31,7 +31,7 @@ const renderMovies = (movies = []) => {
             <button>
               ✏
             </button>
-            <button>
+            <button class="movies__remove" data-id="${movie.id}">
               ❌
             </button>
           </div>
@@ -41,6 +41,24 @@ const renderMovies = (movies = []) => {
   })
 
   movieList.innerHTML = html
+
+  const removeButtons = document.querySelectorAll('.movies__remove')
+
+  removeButtons.forEach(button => {
+    button.addEventListener('click', async (event) => {
+      // 1. Extraer el id de la pelicula a eliminar
+      const { id } = event.target.dataset // dataset -> { id: ??? }
+
+      console.log(id)
+
+      // TODO: Terminar de hacer el llamado a la función 'deleteMovie(id)' y refrescar la tabla de peliculas
+
+      // 2. Eliminar la película en el servidor (opcional: pedir confirmación)
+
+      
+      // 3. Actualizar la lista de películas
+    })
+  })
 }
 
 const moviesForm = document.querySelector('#moviesForm')
