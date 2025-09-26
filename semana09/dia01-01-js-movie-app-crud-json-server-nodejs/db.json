@@ -41,14 +41,6 @@
       "summary": "Resumen de prueba"
     },
     {
-      "id": 7,
-      "name": "Indiana Jones and the Dial of Destiny",
-      "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/Af4bXE63pVsb2FtbW8uYIyPBadD.jpg",
-      "release": "2023-06-30",
-      "genreId": 4,
-      "summary": "Resumen de prueba"
-    },
-    {
       "id": 8,
       "name": "Elemental",
       "image": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
@@ -71,38 +63,6 @@
       "genreId": 1,
       "summary": "resumen de prueba-modificado-2",
       "id": 11
-    },
-    {
-      "name": "ABC",
-      "image": "mi-imagen",
-      "release": "2025-09-29",
-      "genreId": "4",
-      "summary": "abc description",
-      "id": 12
-    },
-    {
-      "name": "XYZ",
-      "image": "xyz-aaa",
-      "release": "2025-09-21",
-      "genreId": "1",
-      "summary": "xyz-aaaaaaa",
-      "id": 13
-    },
-    {
-      "name": "QQQ",
-      "image": "QQQ",
-      "release": "2025-09-23",
-      "genreId": "4",
-      "summary": "qqqq",
-      "id": 14
-    },
-    {
-      "name": "WWW",
-      "image": "AWWW",
-      "release": "2025-09-17",
-      "genreId": "2",
-      "summary": "WWWW",
-      "id": 15
     }
   ]
 }

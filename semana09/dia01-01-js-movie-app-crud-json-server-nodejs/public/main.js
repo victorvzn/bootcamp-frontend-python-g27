@@ -1,4 +1,4 @@
-import { fetchMovies, createMovie } from './services.js'
+import { fetchMovies, createMovie, deleteMovie } from './services.js'
 
 const renderMovies = (movies = []) => {
   const movieList = document.querySelector('.movies__list')
@@ -54,8 +54,15 @@ const renderMovies = (movies = []) => {
       // TODO: Terminar de hacer el llamado a la función 'deleteMovie(id)' y refrescar la tabla de peliculas
 
       // 2. Eliminar la película en el servidor (opcional: pedir confirmación)
+      const confirmDelete = confirm('¿Estas seguro de eliminar esta película?') // Devuelve un booleano
 
-      
+      if (confirmDelete) {
+        await deleteMovie(id)
+
+        const movies = await fetchMovies()
+  
+        renderMovies(movies)
+      }
       // 3. Actualizar la lista de películas
     })
   })
