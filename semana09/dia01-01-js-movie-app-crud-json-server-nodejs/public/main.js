@@ -1,4 +1,4 @@
-import { fetchMovies } from './services.js'
+import { fetchMovies, createMovie } from './services.js'
 
 const renderMovies = (movies = []) => {
   const movieList = document.querySelector('.movies__list')
@@ -14,6 +14,7 @@ const renderMovies = (movies = []) => {
         <td>
           <img
             src="${movie.image}"
+            onerror="this.src='https://placehold.co/100x150?text=Error'"
           />
         </td>
         <td>
@@ -44,7 +45,7 @@ const renderMovies = (movies = []) => {
 
 const moviesForm = document.querySelector('#moviesForm')
 
-moviesForm.addEventListener('submit', (event) => {
+moviesForm.addEventListener('submit', async (event) => {
   event.preventDefault() // Evita que el formulario actualice la página
 
   console.log('Guardando pelicula....')
@@ -65,8 +66,25 @@ moviesForm.addEventListener('submit', (event) => {
   console.log(name, image, release, genreId, summary)
 
   // 2. Crear la película en el servidor
+  const newMovie = {
+    name,
+    image,
+    release,
+    genreId,
+    summary
+  }
+
+  const response = await createMovie(newMovie)
+
+  console.log(response)
 
   // 3. Actualizar la lista de películas
+  const movies = await fetchMovies()
+
+  renderMovies(movies)
+
+  // 4. Limpiamos el formulario
+  peliculaForm.reset()
 })
 
 fetchMovies()

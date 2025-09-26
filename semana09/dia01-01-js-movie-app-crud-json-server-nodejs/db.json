@@ -71,6 +71,38 @@
       "genreId": 1,
       "summary": "resumen de prueba-modificado-2",
       "id": 11
+    },
+    {
+      "name": "ABC",
+      "image": "mi-imagen",
+      "release": "2025-09-29",
+      "genreId": "4",
+      "summary": "abc description",
+      "id": 12
+    },
+    {
+      "name": "XYZ",
+      "image": "xyz-aaa",
+      "release": "2025-09-21",
+      "genreId": "1",
+      "summary": "xyz-aaaaaaa",
+      "id": 13
+    },
+    {
+      "name": "QQQ",
+      "image": "QQQ",
+      "release": "2025-09-23",
+      "genreId": "4",
+      "summary": "qqqq",
+      "id": 14
+    },
+    {
+      "name": "WWW",
+      "image": "AWWW",
+      "release": "2025-09-17",
+      "genreId": "2",
+      "summary": "WWWW",
+      "id": 15
     }
   ]
 }
