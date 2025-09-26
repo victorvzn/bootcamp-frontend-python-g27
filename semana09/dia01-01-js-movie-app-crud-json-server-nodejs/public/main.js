@@ -42,6 +42,33 @@ const renderMovies = (movies = []) => {
   movieList.innerHTML = html
 }
 
+const moviesForm = document.querySelector('#moviesForm')
+
+moviesForm.addEventListener('submit', (event) => {
+  event.preventDefault() // Evita que el formulario actualice la página
+
+  console.log('Guardando pelicula....')
+
+  // 1. Extraer los datos del formulario
+  // moviesForm.querySelector("input[name='name'")
+
+  const peliculaForm = document.forms['moviesForm']
+
+  console.log({ peliculaForm })
+
+  const name = peliculaForm.name.value
+  const image = peliculaForm.image.value
+  const release = peliculaForm.release.value
+  const genreId = peliculaForm.genreId.value
+  const summary = peliculaForm.summary.value
+
+  console.log(name, image, release, genreId, summary)
+
+  // 2. Crear la película en el servidor
+
+  // 3. Actualizar la lista de películas
+})
+
 fetchMovies()
   .then(data => {
     renderMovies(data)
