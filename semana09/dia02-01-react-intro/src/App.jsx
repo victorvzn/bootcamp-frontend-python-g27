@@ -7,3 +7,11 @@ function App() {
 }
 
 export default App
+
+
+// 00 - ESM
+import defecto, { sumar, PI } from './javascript-esm-modules.js'
+
+console.log(sumar(43, 89))
+console.log(PI)
+console.log(defecto())
