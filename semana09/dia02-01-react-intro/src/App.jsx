@@ -1,17 +1,55 @@
-// 06 - IMPORTANDO COMPONENTES EXTERNOS
-import { ComponenteSaludo } from './components/ComponenteSaludo.jsx'
+// 07 - USANDO EXPRESIONES CON JSX
 
-export default function App() {
+import { EDAD, LISTA_DE_FRUTAS, curso } from './components/frutas.js'
+
+const App = () => {
+  const suma = 8 + 9
+  const nombre = 'Victor'
+
+  // Comentario en React/JS dentro del cuerpo de la función
+  /* Otro comentario multilíneas */
+
   return (
-    <section>
-      <div>Componente anidados</div>
+    <div>
+      <h1>Hola React!</h1>
+      <p>Estoy en el bootcamp!</p>
 
-      <ComponenteSaludo />
+      <p>{1 + 2 * 9 ** 2}</p>
 
-      <ComponenteDespedida />
-    </section>
+      <p>{suma}</p>
+
+      <p>Hola {nombre}</p>
+
+      <p>{`Hola ${nombre}`}</p>
+
+      {/* Comentario en React dentro del JSX 1+2 */}
+
+      <p>{LISTA_DE_FRUTAS}</p>
+
+      <p>{EDAD}</p>
+
+      <p>{JSON.stringify(curso)}</p>
+    </div>
   )
 }
+
+export default App
+
+// 06 - IMPORTANDO COMPONENTES EXTERNOS
+// import { ComponenteDespedida } from './components/componente-despedida.jsx'
+// import { ComponenteSaludo } from './components/ComponenteSaludo.jsx'
+
+// export default function App() {
+//   return (
+//     <section>
+//       <div>Componente anidados 5 + 6</div>
+
+//       <ComponenteSaludo />
+
+//       <ComponenteDespedida />
+//     </section>
+//   )
+// }
 
 // 05 - ANIDANDO COMPONENTES DENTRO DE OTROS
 
