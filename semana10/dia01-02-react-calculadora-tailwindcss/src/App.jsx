@@ -5,8 +5,36 @@ const App = () => {
   const [operador, setOperador] = useState('')
   const [operando, setOperando] = useState('')
 
-  const handleButton = () => {
-    console.log('Click')
+  const handleButton = (event) => {
+    // console.log('Click')
+
+    const buttonText = event.target.textContent
+
+    console.log(buttonText)
+
+    // 1. Evaluamos cuando hacemos click en el operador(+, -, *)
+    if ('+-*'.includes(buttonText)) {
+      setOperador(buttonText)
+      setOperando(Number(numeroActual))
+      setNumeroActual('0')
+    } else if (buttonText === '=') {
+      if(operador === '+') {
+        setNumeroActual(Number(operando) + Number(numeroActual))
+      }
+      if(operador === '-') {
+        setNumeroActual(Number(operando) - Number(numeroActual))
+      }
+      if(operador === '*') {
+        setNumeroActual(Number(operando) * Number(numeroActual))
+      }
+    } else if (buttonText === 'CE') {
+      setNumeroActual('0')
+      setOperador('')
+      setOperando('')
+    } else {
+      // 2. Evaluamos cuando presionamos algún número
+      setNumeroActual(Number(numeroActual + buttonText))
+    }
   }
 
   return (
