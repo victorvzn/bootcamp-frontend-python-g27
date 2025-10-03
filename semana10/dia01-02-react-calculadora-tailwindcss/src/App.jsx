@@ -38,32 +38,77 @@ const App = () => {
   }
 
   return (
-    <main>
-      <h1>Calculadora con JS</h1>
+    <main className="bg-blue-400 w-[340px] my-0 mx-auto mt-5 p-4 rounded-md shadow-lg">
+      <h1 className="text-3xl font-bold text-center mb-4">
+        Calculadora con JS
+      </h1>
 
-      <section>
+      <section className="flex flex-col gap-2">
         <input
           readOnly
           value={numeroActual}
+          className="border p-2 text-right text-3xl font-bold rounded-md"
         />
 
-        <div>
-          <button onClick={handleButton}>+</button>
-          <button onClick={handleButton}>-</button>
-          <button onClick={handleButton}>*</button>
+        <div className="grid grid-cols-3 gap-3">
+          <button
+            className="button bg-red-400 p-2 rounded-md hover:bg-red-500 duration-300"
+            onClick={handleButton}
+          >+</button>
+          <button
+            className="button bg-red-400 p-2 rounded-md hover:bg-red-500 duration-300"
+            onClick={handleButton}
+          >-</button>
+          <button
+            className="button bg-red-400 p-2 rounded-md hover:bg-red-500 duration-300"
+            onClick={handleButton}
+          >*</button>
 
-          <button onClick={handleButton}>7</button>
-          <button onClick={handleButton}>8</button>
-          <button onClick={handleButton}>9</button>
-          <button onClick={handleButton}>4</button>
-          <button onClick={handleButton}>5</button>
-          <button onClick={handleButton}>6</button>
-          <button onClick={handleButton}>1</button>
-          <button onClick={handleButton}>2</button>
-          <button onClick={handleButton}>3</button>
+          <button
+            className="button bg-yellow-400 p-2 rounded-md hover:bg-yellow-500 duration-300"
+            onClick={handleButton}
+          >7</button>
+          <button
+            className="button bg-yellow-400 p-2 rounded-md hover:bg-yellow-500 duration-300"
+            onClick={handleButton}
+          >8</button>
+          <button
+            className="button bg-yellow-400 p-2 rounded-md hover:bg-yellow-500 duration-300"
+            onClick={handleButton}
+          >9</button>
+          <button
+            className="button bg-yellow-400 p-2 rounded-md hover:bg-yellow-500 duration-300"
+            onClick={handleButton}
+          >4</button>
+          <button
+            className="button bg-yellow-400 p-2 rounded-md hover:bg-yellow-500 duration-300"
+            onClick={handleButton}
+          >5</button>
+          <button
+            className="button bg-yellow-400 p-2 rounded-md hover:bg-yellow-500 duration-300"
+            onClick={handleButton}
+          >6</button>
+          <button
+            className="button bg-yellow-400 p-2 rounded-md hover:bg-yellow-500 duration-300"
+            onClick={handleButton}
+          >1</button>
+          <button
+            className="button bg-yellow-400 p-2 rounded-md hover:bg-yellow-500 duration-300"
+            onClick={handleButton}
+          >2</button>
+          <button
+            className="button bg-yellow-400 p-2 rounded-md hover:bg-yellow-500 duration-300"
+            onClick={handleButton}
+          >3</button>
 
-          <button onClick={handleButton}>CE</button>
-          <button onClick={handleButton}>=</button>
+          <button
+            className="button bg-green-400 p-2 rounded-md hover:bg-green-500 duration-300"
+            onClick={handleButton}
+          >CE</button>
+          <button
+            className="button bg-green-400 p-2 rounded-md hover:bg-green-500 duration-300"
+            onClick={handleButton}
+          >=</button>
         </div>
       </section>
     </main>
