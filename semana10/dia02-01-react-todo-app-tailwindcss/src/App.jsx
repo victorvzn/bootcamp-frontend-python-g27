@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import './App.css'
+
 function App() {
   const DEFAULT_TODOS = [
     {
@@ -89,7 +91,9 @@ function App() {
               onChange={() => handleCompleted(todo.id)}
             />
 
-            {todo.title}
+            <span className={`${todo.completed ? 'completed' : ''}`}>
+              {todo.title}
+            </span>
 
             <button onClick={() => handleRemove(todo.id)}>❌</button>
           </li>
