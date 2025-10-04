@@ -82,6 +82,15 @@ function App() {
 
       {/* {input} */}
 
+      {/* TODO: Llenar los datos de las estadisticas y limpiar las tareas completadas con el botón */}
+      <section>
+        <span>2 de 3 completadas</span>
+
+        <button>
+          Limpiar completadas
+        </button>
+      </section>
+
       <ul>
         {todos.map((todo, index) => {
           return <li key={todo.id}>
