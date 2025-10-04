@@ -46,6 +46,23 @@ function App() {
     setInput('')
   }
 
+  const handleCompleted = (id) => {
+    console.log('Completando tarea...')
+
+    const updatedTodos = todos.map(todo => {
+      if (todo.id === id) {
+        return {
+          ...todo,
+          completed: !todo.completed
+        }
+      }
+
+      return todo
+    })
+
+    setTodos(updatedTodos)
+  }
+
   return (
     <main>
       <h1>Todo App + React + Tailwind</h1>
@@ -66,6 +83,12 @@ function App() {
       <ul>
         {todos.map((todo, index) => {
           return <li key={todo.id}>
+            <input
+              type='checkbox'
+              checked={todo.completed}
+              onChange={() => handleCompleted(todo.id)}
+            />
+
             {todo.title}
 
             <button onClick={() => handleRemove(todo.id)}>❌</button>
