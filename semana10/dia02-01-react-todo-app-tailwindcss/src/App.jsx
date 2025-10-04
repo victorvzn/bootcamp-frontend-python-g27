@@ -20,6 +20,7 @@ function App() {
   ] 
 
   const [todos, setTodos] = useState(DEFAULT_TODOS)
+  const [input, setInput] = useState('')
 
   const handleRemove = (id) => {
     console.log('Click', id)
@@ -32,7 +33,17 @@ function App() {
     event.preventDefault();
     
     // TODO: 01 - Crear un nuevo todo en el estado todos
-    console.log('Creando tarea...')
+    console.log('Creando tarea...', input)
+
+    const newTodo = {
+      id: crypto.randomUUID(),
+      title: input,
+      completed: false
+    }
+
+    setTodos([...todos, newTodo])
+
+    setInput('')
   }
 
   return (
@@ -44,9 +55,13 @@ function App() {
           type='text'
           placeholder='¿Qué deseas hacer hoy?'
           required
+          onChange={(event) => setInput(event.target.value)}
+          value={input}
         />
         <input type='submit' value='Save' />
       </form>
+
+      {/* {input} */}
 
       <ul>
         {todos.map((todo, index) => {
