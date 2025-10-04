@@ -65,6 +65,14 @@ function App() {
     setTodos(updatedTodos)
   }
 
+  const completedTodos = todos.filter(todo => todo.completed)
+
+  const handleClearCompletedTodos = () => {
+    const incompletedTodos = todos.filter(todo => !todo.completed)
+
+    setTodos(incompletedTodos)
+  }
+
   return (
     <main>
       <h1>Todo App + React + Tailwind</h1>
@@ -84,9 +92,13 @@ function App() {
 
       {/* TODO: Llenar los datos de las estadisticas y limpiar las tareas completadas con el botón */}
       <section>
-        <span>2 de 3 completadas</span>
+        <span>
+          {completedTodos.length} de {todos.length} completadas
+        </span>
 
-        <button>
+        <button
+          onClick={handleClearCompletedTodos}
+        >
           Limpiar completadas
         </button>
       </section>
