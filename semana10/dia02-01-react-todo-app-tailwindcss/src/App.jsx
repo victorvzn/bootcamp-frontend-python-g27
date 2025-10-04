@@ -17,7 +17,7 @@ function App() {
       title: 'Aprender React.js + Tailwind CSS',
       completed: true
     }
-  ]
+  ] 
 
   const [todos, setTodos] = useState(DEFAULT_TODOS)
 
@@ -28,9 +28,25 @@ function App() {
     setTodos(updatedTodos) // Remplazamos el estado todos con los todos actulizados
   }
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    
+    // TODO: 01 - Crear un nuevo todo en el estado todos
+    console.log('Creando tarea...')
+  }
+
   return (
     <main>
       <h1>Todo App + React + Tailwind</h1>
+
+      <form onSubmit={handleSubmit}>
+        <input
+          type='text'
+          placeholder='¿Qué deseas hacer hoy?'
+          required
+        />
+        <input type='submit' value='Save' />
+      </form>
 
       <ul>
         {todos.map((todo, index) => {
