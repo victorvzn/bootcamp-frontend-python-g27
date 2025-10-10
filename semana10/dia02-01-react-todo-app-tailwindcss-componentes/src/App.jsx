@@ -4,6 +4,7 @@ import './App.css'
 
 import TodoHeader from './components/TodoHeader'
 import TodoForm from './components/TodoForm'
+import TodoList from './components/TodoList'
 
 function App() {
   const DEFAULT_TODOS = [
@@ -58,11 +59,15 @@ function App() {
     setTodos(incompletedTodos)
   }
 
+  const handleSave = (newTodo) => {
+    setTodos([...todos, newTodo])
+  }
+
   return (
     <main>
       <TodoHeader title='Todo App + React + Tailwind + props' />
 
-      <TodoForm />
+      <TodoForm onSubmit={handleSave} />
 
       {/* {input} */}
 
@@ -79,23 +84,7 @@ function App() {
         </button>
       </section>
 
-      <ul>
-        {todos.map((todo, index) => {
-          return <li key={todo.id}>
-            <input
-              type='checkbox'
-              checked={todo.completed}
-              onChange={() => handleCompleted(todo.id)}
-            />
-
-            <span className={`${todo.completed ? 'completed' : ''}`}>
-              {todo.title}
-            </span>
-
-            <button onClick={() => handleRemove(todo.id)}>❌</button>
-          </li>
-        })}
-      </ul>
+      <TodoList todos={todos} />
 
       <pre>{JSON.stringify(todos, null, 2)}</pre>
 

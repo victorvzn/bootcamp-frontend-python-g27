@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const TodoForm = () => {
+const TodoForm = ({ onSubmit }) => {
   const [input, setInput] = useState('')
 
   const handleSubmit = (event) => {
@@ -15,7 +15,7 @@ const TodoForm = () => {
       completed: false
     }
 
-    setTodos([...todos, newTodo])
+    onSubmit(newTodo) // Está función llama a la función handleSave del componente App
 
     setInput('')
   }
