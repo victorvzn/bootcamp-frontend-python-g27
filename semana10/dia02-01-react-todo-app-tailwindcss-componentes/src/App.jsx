@@ -2,6 +2,9 @@ import { useState } from 'react'
 
 import './App.css'
 
+import TodoHeader from './components/TodoHeader'
+import TodoForm from './components/TodoForm'
+
 function App() {
   const DEFAULT_TODOS = [
     {
@@ -22,30 +25,12 @@ function App() {
   ] 
 
   const [todos, setTodos] = useState(DEFAULT_TODOS)
-  const [input, setInput] = useState('')
 
   const handleRemove = (id) => {
     console.log('Click', id)
     const updatedTodos = todos.filter(todo => todo.id !== id)
 
     setTodos(updatedTodos) // Remplazamos el estado todos con los todos actulizados
-  }
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    
-    // TODO: 01 - Crear un nuevo todo en el estado todos
-    console.log('Creando tarea...', input)
-
-    const newTodo = {
-      id: crypto.randomUUID(),
-      title: input,
-      completed: false
-    }
-
-    setTodos([...todos, newTodo])
-
-    setInput('')
   }
 
   const handleCompleted = (id) => {
@@ -75,18 +60,9 @@ function App() {
 
   return (
     <main>
-      <h1>Todo App + React + Tailwind</h1>
+      <TodoHeader title='Todo App + React + Tailwind + props' />
 
-      <form onSubmit={handleSubmit}>
-        <input
-          type='text'
-          placeholder='¿Qué deseas hacer hoy?'
-          required
-          onChange={(event) => setInput(event.target.value)}
-          value={input}
-        />
-        <input type='submit' value='Save' />
-      </form>
+      <TodoForm />
 
       {/* {input} */}
 
