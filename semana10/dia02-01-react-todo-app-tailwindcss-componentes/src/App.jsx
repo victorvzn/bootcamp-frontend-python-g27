@@ -5,6 +5,7 @@ import './App.css'
 import TodoHeader from './components/TodoHeader'
 import TodoForm from './components/TodoForm'
 import TodoList from './components/TodoList'
+import TodoStats from './components/TodoStats'
 
 function App() {
   const DEFAULT_TODOS = [
@@ -51,8 +52,6 @@ function App() {
     setTodos(updatedTodos)
   }
 
-  const completedTodos = todos.filter(todo => todo.completed)
-
   const handleClearCompletedTodos = () => {
     const incompletedTodos = todos.filter(todo => !todo.completed)
 
@@ -69,26 +68,11 @@ function App() {
 
       <TodoForm onSubmit={handleSave} />
 
-      {/* {input} */}
+      <TodoStats todos={todos} onClearCompletedTodos={handleClearCompletedTodos} />
 
-      {/* TODO: Llenar los datos de las estadisticas y limpiar las tareas completadas con el botón */}
-      <section>
-        <span>
-          {completedTodos.length} de {todos.length} completadas
-        </span>
-
-        <button
-          onClick={handleClearCompletedTodos}
-        >
-          Limpiar completadas
-        </button>
-      </section>
-
-      <TodoList todos={todos} onCompleted={handleCompleted} />
+      <TodoList todos={todos} onCompleted={handleCompleted} onRemove={handleRemove} />
 
       <pre>{JSON.stringify(todos, null, 2)}</pre>
-
-      {/* <h1 className='logo' style={{ color: 'red', backgroundColor: '#ade' }}>Hola React.js!</h1> */}
     </main>
   )
 }

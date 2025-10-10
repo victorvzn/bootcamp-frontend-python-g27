@@ -1,4 +1,4 @@
-const TodoList = ({ todos, onCompleted }) => {
+const TodoList = ({ todos, onCompleted, onRemove }) => {
   return (
     <ul>
       {todos.map((todo, index) => {
@@ -13,7 +13,7 @@ const TodoList = ({ todos, onCompleted }) => {
             {todo.title}
           </span>
 
-          <button onClick={() => handleRemove(todo.id)}>❌</button>
+          <button onClick={() => onRemove(todo.id)}>❌</button>
         </li>
       })}
     </ul>
