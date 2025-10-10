@@ -84,7 +84,7 @@ function App() {
         </button>
       </section>
 
-      <TodoList todos={todos} />
+      <TodoList todos={todos} onCompleted={handleCompleted} />
 
       <pre>{JSON.stringify(todos, null, 2)}</pre>
 

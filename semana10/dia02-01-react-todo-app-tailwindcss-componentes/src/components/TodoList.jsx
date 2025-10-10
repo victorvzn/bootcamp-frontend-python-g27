@@ -1,4 +1,4 @@
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, onCompleted }) => {
   return (
     <ul>
       {todos.map((todo, index) => {
@@ -6,7 +6,7 @@ const TodoList = ({ todos }) => {
           <input
             type='checkbox'
             checked={todo.completed}
-            onChange={() => handleCompleted(todo.id)}
+            onChange={() => onCompleted(todo.id)}
           />
 
           <span className={`${todo.completed ? 'completed' : ''}`}>
