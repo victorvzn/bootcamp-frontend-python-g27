@@ -1,19 +1,4 @@
-import { useState } from "react"
-
-const useCounter = () => {
-  const [count, setCount] = useState(0)
-
-  const decrement = () => setCount(count - 1)
-  
-  const increment = () => setCount(count + 1)
-
-  return {
-    count,
-    decrement,
-    increment
-  }
-}
-
+import { useCounter } from "../hooks/useCounter"
 
 const Counter = () => {
   const { count, decrement, increment } = useCounter()
