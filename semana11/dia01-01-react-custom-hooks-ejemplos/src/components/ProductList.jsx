@@ -1,6 +1,41 @@
+import { useEffect, useState } from "react"
+
+const fetchProducts = () => {
+  return fetch('https://dummyjson.com/products')
+    .then(reponse => reponse.json())
+}
+
 const ProductList = () => {
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    console.log('Aparece por primera vez')
+
+    // Se ejecuta al cargar por primera vez el componente gracias al arreglo vacío ([])
+    fetchProducts()
+      .then(data => {
+        console.log(data.products)
+        setProducts(data.products)
+      })
+
+  }, [])
+
   return (
-    <div>ProductList</div>
+    <div>
+      <h2>Product list</h2>
+
+      <ul>
+        {products.map(product => {
+          return (
+            <li key={product.id}>
+              <h4>{product.id} - {product.title}</h4>
+              <p>{product.description}</p>
+              <img src={product.thumbnail} />
+            </li>
+          )
+        })}
+      </ul>
+    </div>
   )
 }
 
