@@ -5,11 +5,12 @@ import App from './App.jsx'
 import { BrowserRouter, Route, Routes } from 'react-router'
 
 import LoginPage from './pages/LoginPage.jsx'
+import HomePage from './pages/HomePage.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
-      <Route path='/' element={<App />} />
+      <Route path='/' element={<HomePage />} />
 
       <Route path='/login' element={<LoginPage />} />
       <Route path='/register' element={<h1>Register Page</h1>} />
