@@ -3,7 +3,7 @@ import { Link, Outlet, useNavigate } from "react-router"
 import { useAuth } from "../hooks/useAuth"
 
 const AdminLayout = () => {
-  const { logout } = useAuth()
+  const { logout, user } = useAuth()
 
   const navigate = useNavigate()
 
@@ -21,6 +21,7 @@ const AdminLayout = () => {
 
           <nav className="flex gap-4">
             <Link to='/'>Home</Link>
+            <span>Welcome, {user?.email}!</span>
             <button onClick={handleLogout}>Logout</button>
           </nav>
         </div>
