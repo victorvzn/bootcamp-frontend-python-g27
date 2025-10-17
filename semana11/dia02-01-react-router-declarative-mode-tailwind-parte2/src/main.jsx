@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage.jsx'
 import CharacterPage from './pages/CharacterPage.jsx'
 import AuthLayout from './layouts/AuthLayout.jsx'
 import AdminLayout from './layouts/AdminLayout.jsx'
+import MoviesPage from './pages/MoviesPage.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -18,7 +19,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/characters/:id' element={<CharacterPage />} />
 
         {/* TODO: Crearla ruta movies y obtener el listado de peliculas desde supabase */}
-
+        <Route path='/movies' element={<MoviesPage />} />
       </Route>
 
       <Route element={<AuthLayout />}>
