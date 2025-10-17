@@ -1,9 +1,12 @@
 import { useState } from "react"
-import { supabase } from "../lib/supabase"
 
 import { useNavigate } from "react-router"
 
+import { useAuth } from "../hooks/useAuth"
+
 const LoginPage = () => {
+  const { login } = useAuth()
+
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
@@ -12,17 +15,10 @@ const LoginPage = () => {
   const handleSubmit = async (event) => {
     event.preventDefault() // Evita que el formulario actualice la página
 
-    const { data, error } = await supabase.auth.signInWithPassword({ email, password })
-
-    if (error) {
-      alert('Las credenciales son incorrectas')
-      throw error
-    }
+    await login(email, password)
 
     navigate('/')
 
-    console.log(data)
-    console.log(error)
     console.log(email, password)
   }
 

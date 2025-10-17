@@ -1,6 +1,18 @@
-import { Link, Outlet } from "react-router"
+import { Link, Outlet, useNavigate } from "react-router"
+
+import { useAuth } from "../hooks/useAuth"
 
 const AdminLayout = () => {
+  const { logout } = useAuth()
+
+  const navigate = useNavigate()
+
+  const handleLogout = async () => {
+    await logout()
+
+    navigate('/login')
+  }
+
   return (
     <>
       <header className="bg-yellow-300 p-4">
@@ -9,7 +21,7 @@ const AdminLayout = () => {
 
           <nav className="flex gap-4">
             <Link to='/'>Home</Link>
-            <Link to='/login'>Logout</Link>
+            <button onClick={handleLogout}>Logout</button>
           </nav>
         </div>
       </header>
