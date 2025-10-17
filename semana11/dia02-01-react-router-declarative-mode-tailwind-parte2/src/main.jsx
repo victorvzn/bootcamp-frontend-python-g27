@@ -16,6 +16,9 @@ createRoot(document.getElementById('root')).render(
       <Route element={<AdminLayout />}>
         <Route path='/' element={<HomePage />} />
         <Route path='/characters/:id' element={<CharacterPage />} />
+
+        {/* TODO: Crearla ruta movies y obtener el listado de peliculas desde supabase */}
+
       </Route>
 
       <Route element={<AuthLayout />}>
