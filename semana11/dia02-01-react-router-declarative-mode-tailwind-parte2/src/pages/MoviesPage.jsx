@@ -16,8 +16,6 @@ const MoviesPage = () => {
     fetchMovies()
   }, [])
 
-
-
   return (
     <>
       <h1 className="text-2xl">MoviesPage</h1>
