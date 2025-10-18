@@ -12,6 +12,9 @@ export const counterSlice = createSlice({
       return state + 1
     },
     decrement: (state) => state - 1,
+    // Con parámetros (con payload)
+    incrementBy: (state, action) => state + action.payload
+    // Payload, es la data que pasamos como parámetro al llamar a una acción desde el componente
   }
 })
 
@@ -21,4 +24,4 @@ export const counterSlice = createSlice({
 export default counterSlice.reducer
 
 // Exportamos las acciones
-export const { increment, decrement } = counterSlice.actions
+export const { increment, decrement, incrementBy } = counterSlice.actions

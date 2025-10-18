@@ -1,4 +1,4 @@
-import { increment, decrement } from '../store/counter.js'
+import { increment, decrement, incrementBy } from '../store/counter.js'
 
 import { useSelector, useDispatch } from 'react-redux'
 
@@ -13,6 +13,12 @@ const Counter = () => {
 
       <div className="flex items-center gap-2">
         <button
+          className="bg-sky-400 p-2 min-w-14 rounded font-bold cursor-pointer"
+          onClick={() => dispatch(incrementBy(-5))}
+        >
+          -5
+        </button>
+        <button
           className="bg-green-400 p-2 min-w-14 rounded font-bold cursor-pointer"
           onClick={() => dispatch(decrement())}
         >
@@ -26,6 +32,12 @@ const Counter = () => {
           onClick={() => dispatch(increment())}
         >
           +1
+        </button>
+        <button
+          className="bg-sky-400 p-2 min-w-14 rounded font-bold cursor-pointer"
+          onClick={() => dispatch(incrementBy(5))}
+        >
+          +5
         </button>
       </div>
     </div>
