@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { fetchStudents } from "../services/students"
+import { supabase } from "../lib/supabase"
 
 const StudentsPage = () => {
   const [students, setStudents] = useState([])
@@ -12,6 +13,31 @@ const StudentsPage = () => {
       .then(response => setStudents(response.data))
   }, [])
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    
+    const form = { 'first_name': firstName, 'last_name': lastName }
+
+    console.log(form)
+
+    const { data, error } = await supabase
+      .from('students')
+      .insert([form])
+    
+    if (error) {
+      console.log(error)
+      return
+    }
+
+    console.log('Datos guardados correctamente.', data)
+
+    setFirstName('')
+    setLastName('')
+
+    fetchStudents()
+      .then(response => setStudents(response.data))
+  }
+
   return (
     <section>
       <h2>StudentsPage</h2>
@@ -22,7 +48,7 @@ const StudentsPage = () => {
         })}
       </ul>
 
-      <form>
+      <form onSubmit={handleSubmit}>
         <input type="text" onChange={(event) => setFirstName(event.target.value) } placeholder="First name" />
         <input type="text" onChange={(event) => setLastName(event.target.value) } placeholder="Last name" />
 
