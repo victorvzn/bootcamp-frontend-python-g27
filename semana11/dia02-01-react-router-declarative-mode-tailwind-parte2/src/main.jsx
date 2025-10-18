@@ -20,6 +20,9 @@ createRoot(document.getElementById('root')).render(
 
         {/* TODO: Crearla ruta movies y obtener el listado de peliculas desde supabase */}
         <Route path='/movies' element={<MoviesPage />} />
+
+        {/* TODO: Crear la ruta students, esta debe lista los estudiantes con su nombre y un apellido. Para eso deben crear la tabla students en supabase y listar los datos en la ruta /students. */}
+        {/* <Route path='/students' element={<StudentsPage />} /> */}
       </Route>
 
       <Route element={<AuthLayout />}>
