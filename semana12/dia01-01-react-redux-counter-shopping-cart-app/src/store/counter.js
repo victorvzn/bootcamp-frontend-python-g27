@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const counterSlice = createSlice({
   name: 'Counter',
-  initialState: 99,
+  initialState: 25,
   reducers: {
     // Sin parámetros (sin payload)
     increment: (state) => {
