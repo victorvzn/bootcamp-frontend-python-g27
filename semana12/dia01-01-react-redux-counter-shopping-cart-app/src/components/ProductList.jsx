@@ -1,4 +1,10 @@
+import { useDispatch } from 'react-redux'
+
+import { addToCart } from '../store/cart'
+
 const ProductList = ({ products }) => {
+  const dispatch = useDispatch()
+
   return (
     <section className="flex flex-col p-4">
       <h3 className="text-2xl mb-4 text-center">Product List</h3>
@@ -14,6 +20,7 @@ const ProductList = ({ products }) => {
             <p className="text-center font-bold">{product.title}</p>
             <button
               className="bg-blue-400 p-2 min-w-36 rounded-lg cursor-pointer text-white font-bold hover:bg-blue-500 duration-300"
+              onClick={() => dispatch(addToCart(product))}
             >
               Add to cart
             </button>
