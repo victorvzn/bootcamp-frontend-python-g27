@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 
 import Counter from "./components/Counter"
 import ProductList from "./components/ProductList"
+import ShoppingCart from "./components/ShoppingCart"
 
 const App = () => {
   const [products, setProducts] = useState([])
@@ -17,7 +18,7 @@ const App = () => {
       <section className="flex gap-2">
         <ProductList products={products} />
 
-        {/* <ShoppingCart /> */}
+        <ShoppingCart />
       </section>
 
       <Counter />
