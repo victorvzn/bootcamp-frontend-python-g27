@@ -44,10 +44,12 @@ export const CartSlice = createSlice({
     removeFromCart: (state, action) => {
       // Va la lógica para remover un producto del carrito
       console.log('removeFromCart')
+      // TODO: remover el producto del carrito de compras
     },
     clearCart: (state) => {
       // Va la lógica para limpiar el carrito de compras
       console.log('clearCart')
+      // TODO: Limpiar el carrito de compras
     }
   }
 })
