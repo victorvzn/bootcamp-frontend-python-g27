@@ -1,9 +1,11 @@
+import { useCartStore } from "../store/cart"
+
 const ShoppingCart = () => {
-  const cart = []
+  const { cart, clearCart } = useCartStore()
 
   const total = cart.reduce((acc, product) => {
     const qty = product.qty
-    const price = product.price
+    const price = product.price ?? 0
     const subtotal = qty * price
 
     return acc + subtotal
@@ -24,6 +26,16 @@ const ShoppingCart = () => {
     )
   }
 
+  const formatNumber = (number) => {
+    const localeDefault = 'en-US'
+
+    const options = {
+      minimumFractionDigits: 2
+    }
+
+    return new Intl.NumberFormat(localeDefault, options).format(number)
+  }
+
   return (
     <section className="w-56 p-2">
       <h3 className="text-2xl mb-2 text-center">Carrito de compras</h3>
@@ -31,6 +43,7 @@ const ShoppingCart = () => {
       <div className="mb-2">
         <button
           className="bg-violet-400 text-white px-3 py-2 rounded-lg cursor-pointer w-full hover:bg-violet-600 duration-300"
+          onClick={clearCart}
         >
           Limpiar carrito
         </button>
@@ -56,7 +69,8 @@ const ShoppingCart = () => {
       </ul>
 
       <div className="mt-4 pt-4 font-bold bg-amber-100 px-4 py-2 flex justify-between rounded-lg">
-        <strong>TOTAL:</strong> <span>S/ {total}</span>
+        {/* <strong>TOTAL:</strong> <span>S/ {total.toFixed(2)}</span> */}
+        <strong>TOTAL:</strong> <span>S/ {formatNumber(total)}</span>
       </div>
 
       <pre>{JSON.stringify(cart)}</pre>
