@@ -1,7 +1,7 @@
 import { useCounterStore } from '../store/counter.js'
 
 const Counter = () => {
-  const { count, increment, decrement } = useCounterStore()
+  const { count, increment, decrement, incrementByValue } = useCounterStore()
 
   return (
     <div className="border rounded p-2 flex flex-col gap-2 items-center">
@@ -10,6 +10,7 @@ const Counter = () => {
       <div className="flex items-center gap-2">
         <button
           className="bg-sky-400 p-2 min-w-14 rounded font-bold cursor-pointer"
+          onClick={() => incrementByValue(-5)}
         >
           -5
         </button>
@@ -30,6 +31,7 @@ const Counter = () => {
         </button>
         <button
           className="bg-sky-400 p-2 min-w-14 rounded font-bold cursor-pointer"
+          onClick={() => incrementByValue(5)}
         >
           +5
         </button>
